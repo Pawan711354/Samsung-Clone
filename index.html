@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>My Samsung Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- Header & Hero section -->
+    <header class="hero">
+        <nav>
+            <h1>
+                <img src="images/Samsung_Orig_Wordmark_WHITE_RGB.png" alt="Samsung" class="logo" />
+            </h1>
+
+            <div class="dropdown mobile-dropdown">
+                <a href="#" class="nav-link"> Mobile ▼</a>
+                <div class="dropdown-content-mobile">
+                    <h4>Mobile Phones</h4>
+                    <ul>
+                        <li><img src="images/GNB_P3_176x176.avif" alt="Galaxy S Series" /> Galaxy S Series</li>
+                        <li><img src="images/GNB_P1P2_176x176.avif" alt="Galaxy Z Fold" /> Galaxy Edge</li>
+                        <li><img src="images/img_z_fold6_updated.avif" alt="Galaxy Z Flip" /> Galaxy Z Fold</li>
+                    </ul>
+                    <h4>Tablets</h4>
+                    <ul>
+                        <li><img src="images/img_galaxytab10_series_updated_1.avif" alt="Galaxy Tab S Series" /> Galaxy Tab 10 Ultra</li>
+                    <h4>Accessories</h4>
+                    <ul>
+                        <li><img src="images/img_galaxy_buds3_pro_updated.avif" alt="Earbuds" />Galaxy Buds Pro</li>
+                        <li><img src="images/img_galaxy_watch_ultra_updated.avif" alt="Watches" /> Galaxy Watch Ultra</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown tv-dropdown">
+                <a href="#" class="nav-link"> TV &amp; Audio ▼</a>
+                <div class="dropdown-content-tv">
+                    <h4>TVs</h4>
+                    <ul>
+                        <li>Neo QLED 8K</li>
+                        <li>OLED 4K TVs</li>
+                        <li>The Frame</li>
+                        <li>Crystal UHD</li>
+                    </ul>
+                    <h4>Audio</h4>
+                    <ul>
+                        <li>Q-Series Soundbars</li>
+                        <li>Party Audio</li>
+                        <li>Outdoor Speakers</li>
+                    </ul>
+                    <h4>Accessories</h4>
+                    <ul>
+                        <li>TV Stands</li>
+                        <li>Wall Mounts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown computers-dropdown">
+                <a href="#" class="nav-link">Computers &amp; Displays ▼</a>
+                <div class="dropdown-content-computers">
+                    <h4>Laptops</h4>
+                    <ul>
+                        <li>Galaxy Book4 Ultra</li>
+                        <li>Galaxy Book4 Pro</li>
+                        <li>Galaxy Book4 360</li>
+                    </ul>
+                    <h4>Monitors</h4>
+                    <ul>
+                        <li>Smart Monitor M9</li>
+                        <li>Odyssey OLED</li>
+                        <li>Curved Gaming Monitors</li>
+                    </ul>
+                    <h4>Accessories</h4>
+                    <ul>
+                        <li>Keyboard &amp; Mouse</li>
+                        <li>Monitor Stands</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown appliances-dropdown">
+                <a href="#" class="nav-link">Appliances ▼</a>
+                <div class="dropdown-content-appliances">
+                    <h4>Kitchen Appliances</h4>
+                    <ul>
+                        <li><img src="images/image_asset_Ranges-GNB-176x176.webp" alt="Microwave" /> Microwave</li>
+                        <li><img src="images/image_asset_Refrigerators-GNB-176x176.webp" alt="Refrigerators" /> Refrigerators</li>
+                        <li><img src="images/SDSAC-8791-Bespoke-AI-Laundry-Combo-176x176.avif" alt="Wash & Dry" />  Wash & Dry</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- About Us with popup -->
+            <div class="about-icon">
+                <a href="#">Shops▼</a>
+                <div class="about-popup" id="aboutPopup">
+                    <a href="#">USA </a>
+                    <a href="#">China</a>
+                    <a href="#">North Korea</a>
+                    <a href="#">South Korea</a>
+                    <a href="#">Sri Lanka</a>
+                    <a href="#">New Zealand</a>
+                    <a href="#">India</a>
+                    <a href="#">Japan</a>
+                </div>
+            </div>
+            <a href="#">AI</a>
+
+            <div class="nav-right">
+    <input type="text" placeholder="Search..." class="search-bar" />
+
+    <!-- Cart icon -->
+    <a href="javascript:void(0)" class="cart-icon cart-icon-counter" onclick="toggleCart()">🛒<span id="cartCount">0</span></a>
+
+    <!-- Login / Dashboard Icon -->
+    <a href="login.html" class="icon-btn" id="accountIcon" title="Account">👤</a>
+    <!-- Logout button, hidden by default -->
+    <a href="#" class="icon-btn" id="logoutBtn" style="display: none;" title="Logout">🚪</a>
+</div>
+
+        </nav>
+
+        <h2>Discover the latest Galaxy Devices</h2>
+        <a href="shop-now.html" class="cta-button">Shop Now</a>
+
+       <div class="cart-popup" id="cartPopup">
+  <h3>Your Cart</h3>
+  <div id="cartItems"></div>
+  <div class="cart-summary">
+    Total Items: <span id="itemCount">0</span><br>
+    Grand Total: <span id="grandTotal">$0</span><br><br>
+    <button id="checkoutBtn" style="padding: 8px 16px; background-color: #0074e4; color: white; border: none; border-radius: 4px; cursor: pointer;">Go to Checkout</button>
+  </div>
+</div>
+    </header>
+
+    <!-- Featured Product Section -->
+    <section id="featured" class="featured-product">
+        <div class="button-container">
+            <a href="#" class="learn-more-btn">Learn more</a>
+            <a href="#" class="buy-now-btn">Buy now</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+        <div class="category-list">
+            <div class="category">
+                <img src="Images/MDMX_Feature_Card1_560X560.jpg" alt="Galaxy S25 Ultra" />
+                <p>Galaxy S25 Ultra</p>
+                <a href="Galaxy-S25-Ultra.html" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="category">
+                <img src="Images/MDMX_Feature_Card3_560X560.jpg" alt="Galaxy Tab S10 Ultra" />
+                <p>Galaxy Tab S10 Ultra</p>
+                <a href="Galaxy-Tab-S10-Ultra.html" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="category">
+                <img src="Images/MDMX_Feature_Card2_560X560.jpg" alt="Galaxy S25 Edge" />
+                <p>Galaxy S25 Edge</p>
+                <a href="Galaxy-S25-Edge.html" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="category">
+                <img src="Images/Galaxy Watch.JPG" alt="Galaxy Watch Ultra" />
+                <p>Galaxy Watch Ultra</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Promotions -->
+    <section class="special-promotions">
+        <div class="promo-content">
+            <h2>New AI Smart Monitors</h2>
+            <p>Watch, play, work in style with Samsung Vision AI</p>
+        </div>
+        <div class="promo-buttons">
+            <a href="#" class="promo-btn">Learn More</a>
+            <a href="#" class="promo-btn">Pre Order Now</a>
+        </div>
+    </section>
+
+    <!-- Our Products -->
+    <section class="our-products" id="our-products">
+        <div class="product-list">
+            <div class="product">
+                <img src="Images/LS32BG752NNXGO_V2.jpg" alt="Neo QLED 8K" />
+                <p>Neo QLED 8K</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="Images/LS49CG954SNXZA_V2(1).jpg" alt="Neo KLED 8K" />
+                <p>Neo KLED 8K</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="Images/MDVD_Feature_Card4_560X560.jpg" alt="Odyssey OLED G8" />
+                <p>Odyssey OLED G8</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="Images/MDVD_Feature_Card2_560X560.jpg" alt="The Frame Pro" />
+                <p>The Frame Pro</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section" id="support">
+        <div class="support-content">
+            <h2>Need Help? We’re Here for You</h2>
+            <p>Get personalized support for all your Samsung devices and services.</p>
+        </div>
+        <div class="support-buttons">
+            <a href="#" class="support-btn">Learn More</a>
+            <a href="#" class="support-btn">Buy Now</a>
+        </div>
+    </section>
+
+    <!-- About Us section -->
+    <section class="about-us" id="about-us">
+        <div class="about-list">
+            <div class="about-item">
+                <img src="images/DVE50BG8300V_01_Brushed_Black_SCOM.jpg" alt="Bespoke AI Laundry" />
+                <p>Bespoke AI Laundry</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="about-item">
+                <img src="images/RF90F29AECR_01_Charcoal_Glass_Stainless_Steel_SCOM.webp" alt="Bespoke AI Refrigerator" />
+                <p>Bespoke AI Refrigerator</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="about-item">
+                <img src="images/NSI6DG9900SR_01_Stainless-Steel_SCOM.webp" alt="Bespoke Range" />
+                <p>Bespoke Range</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="about-item">
+                <img src="images/DW90F89P0USR_01_Stainless_Steel_SCOM.webp" alt="Bespoke Dishwasher" />
+                <p>Bespoke Dishwasher</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Highlights -->
+    <section class="latest-highlights" id="latest-highlights">
+        <h3>Latest Highlights</h3>
+        <div class="highlights-list">
+            <!-- Repeat highlight-item as needed -->
+            <div class="highlight-item">
+                <img src="images/DW90F89P0USR_01_Stainless_Steel_SCOM.webp" alt="Highlight 1" />
+                <p>38 dBA Bespoke Auto Open Door Dishwasher with 3rd Rack</p>
+                <span class="price">$999.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="highlight-item">
+                <img src="images/RF90F29AECR_01_Charcoal_Glass_Stainless_Steel_SCOM.webp" alt="Highlight 2" />
+                <p>Bespoke 29 cu. ft. 4-Door French Door Refrigerator with AI Family Hub™+ & AI Vision Inside™ in Charcoal Glass and Stainless Steel</p>
+                <span class="price">$1099.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="highlight-item">
+                <img src="images/RF27CG5100SR_01_Stainless_Steel_SCOM.webp" alt="Highlight 3" />
+                <p>27 cu. ft. Mega Capacity Counter Depth 3-Door French Door Refrigerator with Dual Auto Ice Maker in Stainless Steel</p>
+                <span class="price">$1199.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="highlight-item">
+                <img src="images/NQ70CB700D12_01_White_Glass_SCOM.webp" alt="Highlight 4" />
+                <p>Bespoke 30" Microwave Combination Wall Oven with Flex Duo™ in White Glass</p>
+                <span class="price">$1299.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="highlight-item">
+                <img src="images/NV51CB700S12_01_White_Glass_SCOM.webp" alt="Highlight 5" />
+                <p>Bespoke 30" White Glass Single Wall Oven with AI Pro Cooking™ Camera</p>
+                <span class="price">$1399.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="highlight-item">
+                <img src="images/NZ30K7880US.webp" alt="Highlight 6" />
+                <p>30" Smart Induction Cooktop in Stainless Steel</p>
+                <span class="price">$1499.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="highlight-item">
+                <img src="images/NZ30K7570RS.webp" alt="Highlight 7" />
+                <p>30" Smart Electric Cooktop with Sync Elements in Stainless Steel</p>
+                <span class="price">$1599.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="highlight-item">
+                <img src="images/us-q-series-soundbar-hw-q800f-hw-q800f-za-546923668.webp" alt="Highlight 8" />
+                <p>Q-series Soundbar HW-Q800F 5.1.2 ch Subwoofer (2025)</p>
+                <span class="price">$1699.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="highlight-item">
+                <img src="images/QE1D_HW-Q600C_angle_bundle_1600x1200_v2.webp" alt="Highlight 9" />
+                <p>85" QLED 4K TV with 3.1.2 ch. DOLBY ATMOS Soundbar</p>
+                <span class="price">$1799.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="highlight-item">
+                <img src="images/us-smart-m9-32m90sf-ls32fm902snxza-547845238.webp" alt="Highlight 10" />
+                <p>32" Smart Monitor M9 M90SF 4K OLED Samsung Vision AI</p>
+                <span class="price">$1899.99</span>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Section -->
+    <section class="information-section">
+        <div class="info-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Leadership & Mission</a></li>
+                <li><a href="#">Our Business</a></li>
+                <li><a href="#">Brand Identity</a></li>
+                <li><a href="#">Careers </a></li>
+                <li><a href="#">Investor Relations </a></li>
+                <li><a href="#">Newsroom </a></li>
+                <li><a href="#">Ethics </a></li>
+                <li><a href="#">Samsung Designs </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Chat With Us</a></li>
+                <li><a href="#">Order Help</a></li>
+                <li><a href="#">Product Help</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Register Your Account </a></li>
+                <li><a href="#">Request a Repair </a></li>
+                <li><a href="#">Contact Us </a></li>
+                <li><a href="#">Samsung Community </a></li>
+                <li><a href="#">Feedbacks </a></li>
+                <li><a href="#">Manual & Software </a></li>
+                <li><a href="#">Slide-In Electronic Range Recall </a></li>
+                <li><a href="#">Returns </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Offers</h4>
+            <ul>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Samsung Rewards</a></li>
+                <li><a href="#">Education Offer Program</a></li>
+                <li><a href="#">Government Offer Program</a></li>
+                <li><a href="#">Military Offer Program </a></li>
+                <li><a href="#">Employee Offer Program </a></li>
+                <li><a href="#">First Responder Offer Program </a></li>
+                <li><a href="#">Business Offer Program </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Sustainability</h4>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Environment</a></li>
+                <li><a href="#">Digital Responsibility</a></li>
+                <li><a href="#">Security And Privacy</a></li>
+                <li><a href="#">Accessibility </a></li>
+                <li><a href="#">Labour & Human Rights </a></li>
+                <li><a href="#">Conflict Minerals</a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Locations</h4>
+            <ul>
+                <li><a href="#">Asia Pacific</a></li>
+                <li><a href="#">Europe</a></li>
+                <li><a href="#">Middle East & Africa</a></li>
+                <li><a href="#">Latin America </a></li>
+                <li><a href="#">North America </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Samsung.com </a></li>
+                <li><a href="#">Samsung Experience Store </a></li>
+                <li><a href="#">Samsung Shop </a></li>
+                <li><a href="#">Samsung Setup </a></li>
+                <li><a href="#">Samsung TV Plus </a></li>
+                <li><a href="#">Samsung Care+</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+  <img src="images/Samsung_Orig_Wordmark_WHITE_RGB.png" alt="Samsung Logo" class="footer-logo" />
+  <p>&copy; 2025 Samsung Clone</p>
+  <p>All Rights Reserved</p>
+</footer>
+
+
+
+    <script>
+        // Highlights auto scroll
+        const highlightsList = document.querySelector('.highlights-list');
+        let scrollAmount = 0;
+        let scrollStep = 1;
+        let maxScroll = highlightsList.scrollWidth - highlightsList.clientWidth;
+
+        function autoScroll() {
+            scrollAmount += scrollStep;
+            if (scrollAmount >= maxScroll) {
+                scrollAmount = 0;
+            }
+            highlightsList.scrollLeft = scrollAmount;
+            requestAnimationFrame(autoScroll);
+        }
+
+        window.addEventListener('load', () => {
+            maxScroll = highlightsList.scrollWidth - highlightsList.clientWidth;
+            autoScroll();
+
+            // Handle login state on load
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            const accountIcon = document.getElementById('accountIcon');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            if (loggedInUser) {
+                accountIcon.href = 'dashboard.html';
+                accountIcon.title = 'Go to Dashboard';
+                logoutBtn.style.display = 'inline-block';
+            } else {
+                accountIcon.href = 'login.html';
+                accountIcon.title = 'Log In';
+                logoutBtn.style.display = 'none';
+            }
+
+            // Logout handler
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.removeItem('loggedInUser');
+                window.location.reload();
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            maxScroll = highlightsList.scrollWidth - highlightsList.clientWidth;
+        });
+
+        // Dropdown menu functionality
+        document.querySelectorAll('.dropdown').forEach((dropdown) => {
+            dropdown.addEventListener('mouseenter', () =>
+                dropdown.querySelector('div').classList.add('active')
+            );
+            dropdown.addEventListener('mouseleave', () =>
+                dropdown.querySelector('div').classList.remove('active')
+            );
+        });
+    const cartKey = "samsungCart";
+let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+function saveCart() {
+  localStorage.setItem(cartKey, JSON.stringify(cart));
+}
+
+function updateCartUI() {
+  // update cart icon count, cart popup contents etc.
+}
+
+updateCartUI();
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    saveCart();
+    updateCartUI();
+  }
+  function addToCart(title, price, img, color, storage, screenSize, processor) {
+  cart.push({
+    title,
+    price: parseFloat(price.replace('$', '')),
+    img,
+    color,
+    storage,
+    screenSize,
+    processor
+  });
+  saveCart();
+  updateCartUI();
+}
+function toggleCart() {
+  const cartPopup = document.getElementById('cartPopup');
+  if (cartPopup.style.display === 'block') {
+    cartPopup.style.display = 'none';
+  } else {
+    cartPopup.style.display = 'block';
+  }
+}
+
+  function updateCartUI() {
+    const cartItems = document.getElementById('cartItems');
+    const itemCount = document.getElementById('itemCount');
+    const grandTotal = document.getElementById('grandTotal');
+    const cartCount = document.getElementById('cartCount');
+
+    cartItems.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      total += item.price;
+      const div = document.createElement('div');
+      div.className = 'cart-item';
+      div.innerHTML = `
+  <img src="${item.img}" alt="${item.title}" />
+  <div class="cart-item-details">
+  <strong>${item.title}</strong><br/>
+  Color: ${item.color || "N/A"}<br/>
+  Storage: ${item.storage || "N/A"}<br/>
+  Screen Size: ${item.screenSize || 'N/A'}<br/>
+  Processor: ${item.processor || 'N/A'}
+</div>
+<div class="cart-item-price">
+  $${item.price.toFixed(2)}
+</div>
+  <button onclick="removeFromCart(${index})" style="background:#ff4d4d; border:none; color:white; font-size:0.7rem; padding:2px 6px; border-radius:50%; cursor:pointer;">✖</button>
+`;
+      cartItems.appendChild(div);
+    });
+
+    itemCount.textContent = cart.length;
+    grandTotal.textContent = `$${total.toFixed(2)}`;
+    cartCount.textContent = cart.length;
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+  const checkoutBtn = document.getElementById('checkoutBtn');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      window.location.href = 'checkout.html';
+    });
+  }
+});
+    </script>
+
+</body>
+</html>
