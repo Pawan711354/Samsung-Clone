@@ -1,0 +1,398 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - good morning
+      - good evening
+      - hey there
+      - hello there
+      - what's up
+      - hi there
+      - howdy
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you
+      - catch you later
+      - talk to you soon
+      - see ya
+      - I'm leaving
+      - I have to go
+
+  - intent: iamabot
+    examples: |
+      - are you a bot?
+      - are you real?
+      - are you human?
+      - are you a human or a bot?
+      - who are you?
+      - are you an AI?
+      - are you a chatbot?
+
+  - intent: ask_specs
+    examples: |
+      - What are the specs of the Galaxy S25 Ultra?
+      - Does the S25 Ultra support 5G?
+      - What processor does the Galaxy S25 Ultra have?
+      - Give me the features of Galaxy S25 Ultra
+      - Galaxy S25 Ultra specifications please
+
+  - intent: ask_shipping
+    examples: |
+      - How long does delivery take?
+      - Do you ship to Sri Lanka?
+      - Can I track my order?
+      - When will my phone arrive?
+      - Is delivery available in Colombo?
+      - I want to know about delivery time
+
+  - intent: ask_return_policy
+    examples: |
+      - What is the return policy?
+      - Can I return a phone?
+      - How many days do I have to return it?
+      - Can I get a refund?
+      - What's your return policy?
+      - I need to return my phone
+
+  - intent: ask_specs_galaxy_s25_plus
+    examples: |
+      - Tell me the specs of Galaxy S25+
+      - What are the features of Galaxy S25 Plus?
+      - Galaxy S25+ specifications
+
+  - intent: ask_specs_tab_s10_ultra
+    examples: |
+      - What are the specs of Galaxy Tab S10 Ultra?
+      - Tell me about the Tab S10 Ultra
+      - Features of Tab S10 Ultra
+
+  - intent: ask_specs_galaxy_s25_edge
+    examples: |
+      - Give me the specs of Galaxy S25 Edge
+      - What are the features of Galaxy S25 Edge?
+      - Galaxy S25 Edge details
+
+  - intent: ask_specs_galaxy_s24_ultra
+    examples: |
+      - Specs of Galaxy S24 Ultra?
+      - What features does the S24 Ultra have?
+      - Tell me about Galaxy S24 Ultra
+
+  - intent: ask_specs_galaxy_s24_fe
+    examples: |
+      - What are the specs of Galaxy S24 FE?
+      - Tell me about S24 FE
+      - Features of Galaxy S24 FE
+
+  - intent: ask_specs_galaxy_z_fold6
+    examples: |
+      - Specs of Galaxy Z Fold6
+      - What are the features of Galaxy Z Fold 6?
+      - Tell me about Z Fold6
+
+  - intent: ask_specs_galaxy_z_flip6
+    examples: |
+      - Galaxy Z Flip6 specifications?
+      - Tell me about Galaxy Z Flip 6
+      - Features of Z Flip6
+
+  - intent: ask_specs_tab_s10_fe_plus
+    examples: |
+      - What are the specs of Tab S10 FE+?
+      - Tell me about Tab S10 FE Plus
+      - Features of Tab S10 FE+
+
+  - intent: ask_specs_tab_s9_fe
+    examples: |
+      - Specs for Galaxy Tab S9 FE?
+      - Tell me about Tab S9 FE
+      - Features of Tab S9 FE
+
+  - intent: ask_specs_tab_a9
+    examples: |
+      - What are the specs of Galaxy Tab A9?
+      - Tell me about Tab A9
+      - Features of Tab A9
+
+  - intent: ask_specs_galaxy_book5_pro_360
+    examples: |
+      - Specs of Galaxy Book5 Pro 360
+      - Tell me about Galaxy Book5 Pro 360
+      - Features of Book5 Pro 360
+
+  - intent: ask_specs_galaxy_book5_360
+    examples: |
+      - What are the specs of Galaxy Book5 360?
+      - Tell me about Book5 360
+      - Features of Galaxy Book5 360
+
+  - intent: ask_specs_monitor_27_1800r_curved
+    examples: |
+      - Specs of 27 inch 1800R Curved Monitor
+      - Tell me about 27" curved monitor
+      - Features of 27" 1800R curved gaming monitor
+
+  - intent: ask_specs_galaxy_book4_pro_360
+    examples: |
+      - Specs of Galaxy Book4 Pro 360
+      - Tell me about Book4 Pro 360
+      - Features of Galaxy Book4 Pro 360
+
+  - intent: ask_specs_galaxy_book4
+    examples: |
+      - What are the specs of Galaxy Book4?
+      - Tell me about Book4
+      - Features of Galaxy Book4
+
+  - intent: ask_specs_odyssey_oled_g9_49
+    examples: |
+      - Specs of Odyssey OLED G9 49 inch?
+      - Tell me about Odyssey OLED G9
+      - Features of 49" Odyssey OLED G9 gaming monitor
+
+  - intent: ask_specs_galaxy_book3_360
+    examples: |
+      - Specs of Galaxy Book3 360
+      - Tell me about Book3 360
+      - Features of Galaxy Book3 360
+
+  - intent: ask_specs_odyssey_3d_27_4k
+    examples: |
+      - Specs of Odyssey 3D 27 inch 4K Monitor
+      - Tell me about 27" Odyssey 3D 4K
+      - Features of Odyssey 3D 27" 4K Gaming Monitor
+
+  - intent: ask_specs_m7_uhd_32
+    examples: |
+      - Specs of Samsung M7 32 inch UHD 4K Smart Monitor
+      - Tell me about M7 UHD 4K Monitor
+      - Features of Samsung M7 32" UHD 4K Monitor
+
+  - intent: ask_specs_neo_qled_qn950f_85
+    examples: |
+      - Specs of Neo QLED QN950F 85 inch
+      - Tell me about Neo QLED QN950F
+      - Features of 85" Neo QLED QN950F Smart TV
+
+  - intent: ask_specs_neo_qled_qn90d_75
+    examples: |
+      - Specs of Neo QLED QN90D 75 inch
+      - Tell me about Neo QLED QN90D
+      - Features of 75" Neo QLED QN90D Smart AI TV
+
+  - intent: ask_specs_crystal_uhd_du8300_75
+    examples: |
+      - Specs of Crystal UHD DU8300 75 inch
+      - Tell me about Crystal UHD DU8300
+      - Features of 75" Crystal UHD DU8300 4K Smart TV
+
+  - intent: ask_specs_convertible_5in1_fridge_633
+    examples: |
+      - Specs of 633L Convertible 5in1 Fridge
+      - Tell me about Convertible 5in1 Side by Side Refrigerator
+      - Features of 633L Convertible Fridge
+
+  - intent: ask_specs_twin_cooling_plus_fridge_550
+    examples: |
+      - Specs of 550L Twin Cooling Plus Fridge
+      - Tell me about Twin Cooling Plus French Door Refrigerator
+      - Features of 550L Twin Cooling Plus Fridge
+
+  - intent: ask_specs_bespoke_flex_family_hub_fridge_810
+    examples: |
+      - Specs of 810L Bespoke Flex Family Hub Fridge
+      - Tell me about Bespoke 4-Door Flex Family Hub Refrigerator
+      - Features of 810L Bespoke Fridge
+
+  - intent: ask_specs_flex_bespoke_fridge_870
+    examples: |
+      - Specs of 870L 4-Door Flex Bespoke Fridge
+      - Tell me about 4-Door Flex French Door Bespoke Refrigerator
+      - Features of 870L Flex Bespoke Fridge
+
+  - intent: ask_specs_moisture_sensor_smart_oven_28
+    examples: |
+      - Specs of 28L Moisture Sensor Smart Oven
+      - Tell me about Moisture Sensor Smart Oven
+      - Features of 28L Smart Oven
+
+  - intent: ask_specs_dough_proof_convection_microwave_21
+    examples: |
+      - Specs of 21L Dough Proof Convection Microwave Oven
+      - Tell me about Dough Proof Convection Microwave
+      - Features of 21L Convection Microwave Oven
+
+  - intent: ask_specs_browning_plus_grill_microwave_23
+    examples: |
+      - Specs of 23L Browning Plus Grill Microwave Oven
+      - Tell me about Browning Plus Grill Microwave
+      - Features of 23L Grill Microwave Oven
+
+  - intent: ask_specs_intensivewash_dishwasher
+    examples: |
+      - Specs of IntensiveWash Dishwasher
+      - Tell me about IntensiveWash Dishwasher with 13 Place Settings
+      - Features of IntensiveWash Dishwasher
+
+  - intent: ask_specs_inverter_split_ac_hot_cold
+    examples: |
+      - Specs of Inverter Split AC Hot and Cold
+      - Tell me about Inverter Split AC
+      - Features of Split AC with Hot and Cold modes
+
+  - intent: ask_specs_windfree_inverter_split_ac
+    examples: |
+      - Specs of WindFree Inverter Split AC
+      - Tell me about WindFree Inverter Split AC
+      - Features of WindFree AC without direct airflow
+
+  - intent: ask_specs_top_load_washer_10kg
+    examples: |
+      - Specs of 10kg Top Load Washing Machine
+      - Tell me about Top Load Washing Machine with AI Wash
+      - Features of 10kg Top Load Washer
+
+  - intent: ask_specs_washer_dryer_combo_25kg
+    examples: |
+      - Specs of 25kg Washer Dryer Combo
+      - Tell me about AI Enabled Washer Dryer Combo with Heat Pump
+      - Features of 25kg Washer Dryer Combo
+
+  - intent: ask_specs_front_load_washer_9kg
+    examples: |
+      - Specs of 9kg Front Load Washing Machine
+      - Tell me about Front Load Washer with AI Ecobubble
+      - Features of 9kg Front Load Washer
+
+  - intent: ask_specs_galaxy_watch_ultra
+    examples: |
+      - Specs of Galaxy Watch Ultra
+      - Tell me about Galaxy Watch Ultra
+      - Features of Galaxy Watch Ultra
+
+  - intent: ask_specs_galaxy_watch7
+    examples: |
+      - Specs of Galaxy Watch7
+      - Tell me about Galaxy Watch7
+      - Features of Galaxy Watch7
+
+  - intent: ask_specs_galaxy_watch6_classic
+    examples: |
+      - Specs of Galaxy Watch6 Classic
+      - Tell me about Galaxy Watch6 Classic
+      - Features of Galaxy Watch6 Classic
+
+  - intent: ask_specs_galaxy_buds_core
+    examples: |
+      - Specs of Galaxy Buds Core
+      - Tell me about Galaxy Buds Core
+      - Features of Galaxy Buds Core
+
+  - intent: ask_specs_galaxy_buds3_pro
+    examples: |
+      - Specs of Galaxy Buds3 Pro
+      - Tell me about Galaxy Buds3 Pro
+      - Features of Galaxy Buds3 Pro
+
+  - intent: ask_specs_earphone_ehs64
+    examples: |
+      - Specs of Samsung EHS64 Wired Stereo Headset
+      - Tell me about EHS64 Earphones
+      - Features of Samsung EHS64 Headset with Mic
+
+  - intent: ask_specs_galaxy_ring
+    examples: |
+      - Specs of Galaxy Ring
+      - Tell me about Galaxy Ring
+      - Features of Galaxy Ring fitness tracker
+
+  - intent: ask_specs_q_series_soundbar_q930f
+    examples: |
+      - Specs of Q-series Soundbar Q930F
+      - Tell me about Soundbar Q930F
+      - Features of 580W 9.1.4 Ch. Soundbar with Q-Symphony
+
+  - intent: ask_specs_soundbar_s61b
+    examples: |
+      - Specs of Soundbar S61B
+      - Tell me about Soundbar 200W S61B
+      - Features of Soundbar S61B
+
+  - intent: ask_specs_sound_tower_st90b
+    examples: |
+      - Specs of Sound Tower ST90B
+      - Tell me about 1700W Sound Tower ST90B
+      - Features of Sound Tower ST90B
+
+  - intent: ask_specs_premiere_lpu9d_projector
+    examples: |
+      - Specs of Premiere LPU9D Projector
+      - Tell me about Premiere LPU9D 4K Projector
+      - Features of Ultra-short throw 4K Tizen OS Projector
+
+  - intent: ask_specs_galaxy_tab_s8_fe
+    examples: |
+      - What are the specs of Galaxy Tab S8 FE?
+      - Tell me about the Tab S8 FE features
+      - Galaxy Tab S8 FE specifications
+
+  - intent: ask_specs_galaxy_s23_fe
+    examples: |
+      - Specs of Galaxy S23 FE
+      - What features does Galaxy S23 FE have?
+      - Tell me about Galaxy S23 FE
+
+  - intent: ask_specs_galaxy_watch5_pro
+    examples: |
+      - Tell me the specs of Galaxy Watch5 Pro
+      - What are the features of Watch5 Pro?
+      - Galaxy Watch5 Pro specifications
+
+  - intent: ask_specs_galaxy_buds2_pro
+    examples: |
+      - What are the specs of Galaxy Buds2 Pro?
+      - Tell me about Galaxy Buds2 Pro
+      - Features of Galaxy Buds2 Pro
+
+  - intent: ask_specs_galaxy_s21_fe
+    examples: |
+      - Give me the specs of Galaxy S21 FE
+      - What are the features of S21 FE?
+      - Galaxy S21 FE specifications
+
+  - intent: ask_specs_galaxy_tab_a8
+    examples: |
+      - Tell me about Galaxy Tab A8 specs
+      - What features does the Tab A8 have?
+      - Specs of Galaxy Tab A8
+
+  - intent: ask_specs_galaxy_book2_pro_360
+    examples: |
+      - What are the specs of Galaxy Book2 Pro 360?
+      - Tell me about Book2 Pro 360
+      - Features of Galaxy Book2 Pro 360
+
+  - intent: ask_specs_galaxy_tab_s7_plus
+    examples: |
+      - Specs of Galaxy Tab S7 Plus
+      - What features does Tab S7 Plus have?
+      - Tell me about Galaxy Tab S7 Plus
+
+  - intent: ask_specs_galaxy_z_fold5
+    examples: |
+      - Give me specs of Galaxy Z Fold5
+      - What are the features of Z Fold5?
+      - Tell me about Galaxy Z Fold5
+
+  - intent: ask_specs_galaxy_s22_ultra
+    examples: |
+      - Specs of Galaxy S22 Ultra
+      - What features does S22 Ultra have?
+      - Tell me about Galaxy S22 Ultra

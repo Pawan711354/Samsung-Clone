@@ -1,0 +1,314 @@
+version: "3.1"
+
+rules:
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Goodbye user
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Identify bot
+    steps:
+      - intent: iamabot
+      - action: utter_iamabot
+
+  - rule: Ask general specs
+    steps:
+      - intent: ask_specs
+      - action: utter_ask_specs
+
+  - rule: Ask shipping info
+    steps:
+      - intent: ask_shipping
+      - action: utter_ask_shipping
+
+  - rule: Ask return policy
+    steps:
+      - intent: ask_return_policy
+      - action: utter_ask_return_policy
+
+  # Rules for specific product specs - respond with respective utterance
+
+  - rule: Ask specs Galaxy S25 Plus
+    steps:
+      - intent: ask_specs_galaxy_s25_plus
+      - action: utter_ask_specs_galaxy_s25_plus
+
+  - rule: Ask specs Tab S10 Ultra
+    steps:
+      - intent: ask_specs_tab_s10_ultra
+      - action: utter_ask_specs_tab_s10_ultra
+
+  - rule: Ask specs Galaxy S25 Edge
+    steps:
+      - intent: ask_specs_galaxy_s25_edge
+      - action: utter_ask_specs_galaxy_s25_edge
+
+  - rule: Ask specs Galaxy S24 Ultra
+    steps:
+      - intent: ask_specs_galaxy_s24_ultra
+      - action: utter_ask_specs_galaxy_s24_ultra
+
+  - rule: Ask specs Galaxy S24 FE
+    steps:
+      - intent: ask_specs_galaxy_s24_fe
+      - action: utter_ask_specs_galaxy_s24_fe
+
+  - rule: Ask specs Galaxy Z Fold6
+    steps:
+      - intent: ask_specs_galaxy_z_fold6
+      - action: utter_ask_specs_galaxy_z_fold6
+
+  - rule: Ask specs Galaxy Z Flip6
+    steps:
+      - intent: ask_specs_galaxy_z_flip6
+      - action: utter_ask_specs_galaxy_z_flip6
+
+  - rule: Ask specs Tab S10 FE Plus
+    steps:
+      - intent: ask_specs_tab_s10_fe_plus
+      - action: utter_ask_specs_tab_s10_fe_plus
+
+  - rule: Ask specs Tab S9 FE
+    steps:
+      - intent: ask_specs_tab_s9_fe
+      - action: utter_ask_specs_tab_s9_fe
+
+  - rule: Ask specs Tab A9
+    steps:
+      - intent: ask_specs_tab_a9
+      - action: utter_ask_specs_tab_a9
+
+  - rule: Ask specs Galaxy Book5 Pro 360
+    steps:
+      - intent: ask_specs_galaxy_book5_pro_360
+      - action: utter_ask_specs_galaxy_book5_pro_360
+
+  - rule: Ask specs Galaxy Book5 360
+    steps:
+      - intent: ask_specs_galaxy_book5_360
+      - action: utter_ask_specs_galaxy_book5_360
+
+  - rule: Ask specs Monitor 27 1800R Curved
+    steps:
+      - intent: ask_specs_monitor_27_1800r_curved
+      - action: utter_ask_specs_monitor_27_1800r_curved
+
+  - rule: Ask specs Galaxy Book4 Pro 360
+    steps:
+      - intent: ask_specs_galaxy_book4_pro_360
+      - action: utter_ask_specs_galaxy_book4_pro_360
+
+  - rule: Ask specs Galaxy Book4
+    steps:
+      - intent: ask_specs_galaxy_book4
+      - action: utter_ask_specs_galaxy_book4
+
+  - rule: Ask specs Odyssey OLED G9 49
+    steps:
+      - intent: ask_specs_odyssey_oled_g9_49
+      - action: utter_ask_specs_odyssey_oled_g9_49
+
+  - rule: Ask specs Galaxy Book3 360
+    steps:
+      - intent: ask_specs_galaxy_book3_360
+      - action: utter_ask_specs_galaxy_book3_360
+
+  - rule: Ask specs Odyssey 3D 27 4K
+    steps:
+      - intent: ask_specs_odyssey_3d_27_4k
+      - action: utter_ask_specs_odyssey_3d_27_4k
+
+  - rule: Ask specs M7 UHD 32
+    steps:
+      - intent: ask_specs_m7_uhd_32
+      - action: utter_ask_specs_m7_uhd_32
+
+  - rule: Ask specs Neo QLED QN950F 85
+    steps:
+      - intent: ask_specs_neo_qled_qn950f_85
+      - action: utter_ask_specs_neo_qled_qn950f_85
+
+  - rule: Ask specs Neo QLED QN90D 75
+    steps:
+      - intent: ask_specs_neo_qled_qn90d_75
+      - action: utter_ask_specs_neo_qled_qn90d_75
+
+  - rule: Ask specs Crystal UHD DU8300 75
+    steps:
+      - intent: ask_specs_crystal_uhd_du8300_75
+      - action: utter_ask_specs_crystal_uhd_du8300_75
+
+  - rule: Ask specs Convertible 5in1 Fridge 633
+    steps:
+      - intent: ask_specs_convertible_5in1_fridge_633
+      - action: utter_ask_specs_convertible_5in1_fridge_633
+
+  - rule: Ask specs Twin Cooling Plus Fridge 550
+    steps:
+      - intent: ask_specs_twin_cooling_plus_fridge_550
+      - action: utter_ask_specs_twin_cooling_plus_fridge_550
+
+  - rule: Ask specs Bespoke Flex Family Hub Fridge 810
+    steps:
+      - intent: ask_specs_bespoke_flex_family_hub_fridge_810
+      - action: utter_ask_specs_bespoke_flex_family_hub_fridge_810
+
+  - rule: Ask specs Flex Bespoke Fridge 870
+    steps:
+      - intent: ask_specs_flex_bespoke_fridge_870
+      - action: utter_ask_specs_flex_bespoke_fridge_870
+
+  - rule: Ask specs Moisture Sensor Smart Oven 28
+    steps:
+      - intent: ask_specs_moisture_sensor_smart_oven_28
+      - action: utter_ask_specs_moisture_sensor_smart_oven_28
+
+  - rule: Ask specs Dough Proof Convection Microwave 21
+    steps:
+      - intent: ask_specs_dough_proof_convection_microwave_21
+      - action: utter_ask_specs_dough_proof_convection_microwave_21
+
+  - rule: Ask specs Browning Plus Grill Microwave 23
+    steps:
+      - intent: ask_specs_browning_plus_grill_microwave_23
+      - action: utter_ask_specs_browning_plus_grill_microwave_23
+
+  - rule: Ask specs IntensiveWash Dishwasher
+    steps:
+      - intent: ask_specs_intensivewash_dishwasher
+      - action: utter_ask_specs_intensivewash_dishwasher
+
+  - rule: Ask specs Inverter Split AC Hot and Cold
+    steps:
+      - intent: ask_specs_inverter_split_ac_hot_cold
+      - action: utter_ask_specs_inverter_split_ac_hot_cold
+
+  - rule: Ask specs WindFree Inverter Split AC
+    steps:
+      - intent: ask_specs_windfree_inverter_split_ac
+      - action: utter_ask_specs_windfree_inverter_split_ac
+
+  - rule: Ask specs Top Load Washer 10kg
+    steps:
+      - intent: ask_specs_top_load_washer_10kg
+      - action: utter_ask_specs_top_load_washer_10kg
+
+  - rule: Ask specs Washer Dryer Combo 25kg
+    steps:
+      - intent: ask_specs_washer_dryer_combo_25kg
+      - action: utter_ask_specs_washer_dryer_combo_25kg
+
+  - rule: Ask specs Front Load Washer 9kg
+    steps:
+      - intent: ask_specs_front_load_washer_9kg
+      - action: utter_ask_specs_front_load_washer_9kg
+
+  - rule: Ask specs Galaxy Watch Ultra
+    steps:
+      - intent: ask_specs_galaxy_watch_ultra
+      - action: utter_ask_specs_galaxy_watch_ultra
+
+  - rule: Ask specs Galaxy Watch7
+    steps:
+      - intent: ask_specs_galaxy_watch7
+      - action: utter_ask_specs_galaxy_watch7
+
+  - rule: Ask specs Galaxy Watch6 Classic
+    steps:
+      - intent: ask_specs_galaxy_watch6_classic
+      - action: utter_ask_specs_galaxy_watch6_classic
+
+  - rule: Ask specs Galaxy Buds Core
+    steps:
+      - intent: ask_specs_galaxy_buds_core
+      - action: utter_ask_specs_galaxy_buds_core
+
+  - rule: Ask specs Galaxy Buds3 Pro
+    steps:
+      - intent: ask_specs_galaxy_buds3_pro
+      - action: utter_ask_specs_galaxy_buds3_pro
+
+  - rule: Ask specs Earphone EHS64
+    steps:
+      - intent: ask_specs_earphone_ehs64
+      - action: utter_ask_specs_earphone_ehs64
+
+  - rule: Ask specs Galaxy Ring
+    steps:
+      - intent: ask_specs_galaxy_ring
+      - action: utter_ask_specs_galaxy_ring
+
+  - rule: Ask specs Q-series Soundbar Q930F
+    steps:
+      - intent: ask_specs_q_series_soundbar_q930f
+      - action: utter_ask_specs_q_series_soundbar_q930f
+
+  - rule: Ask specs Soundbar S61B
+    steps:
+      - intent: ask_specs_soundbar_s61b
+      - action: utter_ask_specs_soundbar_s61b
+
+  - rule: Ask specs Sound Tower ST90B
+    steps:
+      - intent: ask_specs_sound_tower_st90b
+      - action: utter_ask_specs_sound_tower_st90b
+
+  - rule: Ask specs Premiere LPU9D Projector
+    steps:
+      - intent: ask_specs_premiere_lpu9d_projector
+      - action: utter_ask_specs_premiere_lpu9d_projector
+
+  - rule: Ask specs Galaxy Tab S8 FE
+    steps:
+      - intent: ask_specs_galaxy_tab_s8_fe
+      - action: utter_ask_specs_galaxy_tab_s8_fe
+
+  - rule: Ask specs Galaxy S23 FE
+    steps:
+      - intent: ask_specs_galaxy_s23_fe
+      - action: utter_ask_specs_galaxy_s23_fe
+
+  - rule: Ask specs Galaxy Watch5 Pro
+    steps:
+      - intent: ask_specs_galaxy_watch5_pro
+      - action: utter_ask_specs_galaxy_watch5_pro
+
+  - rule: Ask specs Galaxy Buds2 Pro
+    steps:
+      - intent: ask_specs_galaxy_buds2_pro
+      - action: utter_ask_specs_galaxy_buds2_pro
+
+  - rule: Ask specs Galaxy S21 FE
+    steps:
+      - intent: ask_specs_galaxy_s21_fe
+      - action: utter_ask_specs_galaxy_s21_fe
+
+  - rule: Ask specs Galaxy Tab A8
+    steps:
+      - intent: ask_specs_galaxy_tab_a8
+      - action: utter_ask_specs_galaxy_tab_a8
+
+  - rule: Ask specs Galaxy Book2 Pro 360
+    steps:
+      - intent: ask_specs_galaxy_book2_pro_360
+      - action: utter_ask_specs_galaxy_book2_pro_360
+
+  - rule: Ask specs Galaxy Tab S7 Plus
+    steps:
+      - intent: ask_specs_galaxy_tab_s7_plus
+      - action: utter_ask_specs_galaxy_tab_s7_plus
+
+  - rule: Ask specs Galaxy Z Fold5
+    steps:
+      - intent: ask_specs_galaxy_z_fold5
+      - action: utter_ask_specs_galaxy_z_fold5
+
+  - rule: Ask specs Galaxy S22 Ultra
+    steps:
+      - intent: ask_specs_galaxy_s22_ultra
+      - action: utter_ask_specs_galaxy_s22_ultra

@@ -1,0 +1,256 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - iamabot
+  - ask_specs
+  - ask_shipping
+  - ask_return_policy
+  - ask_specs_galaxy_s25_plus
+  - ask_specs_tab_s10_ultra
+  - ask_specs_galaxy_s25_edge
+  - ask_specs_galaxy_s24_ultra
+  - ask_specs_galaxy_s24_fe
+  - ask_specs_galaxy_z_fold6
+  - ask_specs_galaxy_z_flip6
+  - ask_specs_tab_s10_fe_plus
+  - ask_specs_tab_s9_fe
+  - ask_specs_tab_a9
+  - ask_specs_galaxy_book5_pro_360
+  - ask_specs_galaxy_book5_360
+  - ask_specs_monitor_27_1800r_curved
+  - ask_specs_galaxy_book4_pro_360
+  - ask_specs_galaxy_book4
+  - ask_specs_odyssey_oled_g9_49
+  - ask_specs_galaxy_book3_360
+  - ask_specs_odyssey_3d_27_4k
+  - ask_specs_m7_uhd_32
+  - ask_specs_neo_qled_qn950f_85
+  - ask_specs_neo_qled_qn90d_75
+  - ask_specs_crystal_uhd_du8300_75
+  - ask_specs_convertible_5in1_fridge_633
+  - ask_specs_twin_cooling_plus_fridge_550
+  - ask_specs_bespoke_flex_family_hub_fridge_810
+  - ask_specs_flex_bespoke_fridge_870
+  - ask_specs_moisture_sensor_smart_oven_28
+  - ask_specs_dough_proof_convection_microwave_21
+  - ask_specs_browning_plus_grill_microwave_23
+  - ask_specs_intensivewash_dishwasher
+  - ask_specs_inverter_split_ac_hot_cold
+  - ask_specs_windfree_inverter_split_ac
+  - ask_specs_top_load_washer_10kg
+  - ask_specs_washer_dryer_combo_25kg
+  - ask_specs_front_load_washer_9kg
+  - ask_specs_galaxy_watch_ultra
+  - ask_specs_galaxy_watch7
+  - ask_specs_galaxy_watch6_classic
+  - ask_specs_galaxy_buds_core
+  - ask_specs_galaxy_buds3_pro
+  - ask_specs_earphone_ehs64
+  - ask_specs_galaxy_ring
+  - ask_specs_q_series_soundbar_q930f
+  - ask_specs_soundbar_s61b
+  - ask_specs_sound_tower_st90b
+  - ask_specs_premiere_lpu9d_projector
+  - ask_specs_galaxy_tab_s8_fe
+  - ask_specs_galaxy_s23_fe
+  - ask_specs_galaxy_watch5_pro
+  - ask_specs_galaxy_buds2_pro
+  - ask_specs_galaxy_s21_fe
+  - ask_specs_galaxy_tab_a8
+  - ask_specs_galaxy_book2_pro_360
+  - ask_specs_galaxy_tab_s7_plus
+  - ask_specs_galaxy_z_fold5
+  - ask_specs_galaxy_s22_ultra
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you with Samsung products today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Feel free to ask if you need anything else."
+
+  utter_iamabot:
+    - text: "I am a chatbot here to help you with Samsung product information."
+
+  utter_ask_specs:
+    - text: "Please specify which Samsung product you want to know about."
+
+  utter_ask_shipping:
+    - text: "Delivery times vary by location. Where are you located?"
+
+  utter_ask_return_policy:
+    - text: "Our return policy allows returns within 14 days of purchase with original packaging."
+
+  utter_ask_specs_galaxy_s25_plus:
+    - text: "The Galaxy S25+ features a stunning display, powerful processor, and 5G support."
+
+  utter_ask_specs_tab_s10_ultra:
+    - text: "The Galaxy Tab S10 Ultra has a large AMOLED display and long-lasting battery."
+
+  utter_ask_specs_galaxy_s25_edge:
+    - text: "The Galaxy S25 Edge comes with an elegant curved display and advanced camera system."
+
+  utter_ask_specs_galaxy_s24_ultra:
+    - text: "The Galaxy S24 Ultra boasts improved battery life and enhanced camera performance."
+
+  utter_ask_specs_galaxy_s24_fe:
+    - text: "The Galaxy S24 FE offers flagship features at a more affordable price."
+
+  utter_ask_specs_galaxy_z_fold6:
+    - text: "The Galaxy Z Fold6 features a foldable display with multitasking capabilities."
+
+  utter_ask_specs_galaxy_z_flip6:
+    - text: "The Galaxy Z Flip6 combines compact design with cutting-edge technology."
+
+  utter_ask_specs_tab_s10_fe_plus:
+    - text: "The Tab S10 FE+ offers versatile features with a powerful chipset."
+
+  utter_ask_specs_tab_s9_fe:
+    - text: "Galaxy Tab S9 FE is designed for efficiency and portability."
+
+  utter_ask_specs_tab_a9:
+    - text: "Galaxy Tab A9 is perfect for everyday tasks and entertainment."
+
+  utter_ask_specs_galaxy_book5_pro_360:
+    - text: "Galaxy Book5 Pro 360 offers a flexible 2-in-1 laptop experience."
+
+  utter_ask_specs_galaxy_book5_360:
+    - text: "Galaxy Book5 360 provides high performance with convertible design."
+
+  utter_ask_specs_monitor_27_1800r_curved:
+    - text: "The 27 inch 1800R Curved Monitor delivers immersive visuals with curved screen technology."
+
+  utter_ask_specs_galaxy_book4_pro_360:
+    - text: "Galaxy Book4 Pro 360 combines power and portability with a convertible design."
+
+  utter_ask_specs_galaxy_book4:
+    - text: "Galaxy Book4 is a high-performance laptop with a sleek design."
+
+  utter_ask_specs_odyssey_oled_g9_49:
+    - text: "Odyssey OLED G9 49 inch monitor offers ultra-wide display with stunning OLED colors."
+
+  utter_ask_specs_galaxy_book3_360:
+    - text: "Galaxy Book3 360 features a powerful processor with versatile convertible usage."
+
+  utter_ask_specs_odyssey_3d_27_4k:
+    - text: "Odyssey 3D 27 inch 4K Monitor offers sharp visuals and advanced gaming features."
+
+  utter_ask_specs_m7_uhd_32:
+    - text: "Samsung M7 32 inch UHD 4K Smart Monitor supports multiple devices and streaming apps."
+
+  utter_ask_specs_neo_qled_qn950f_85:
+    - text: "Neo QLED QN950F 85 inch delivers exceptional brightness and contrast for stunning visuals."
+
+  utter_ask_specs_neo_qled_qn90d_75:
+    - text: "Neo QLED QN90D 75 inch combines smart features with premium display quality."
+
+  utter_ask_specs_crystal_uhd_du8300_75:
+    - text: "Crystal UHD DU8300 75 inch is a smart TV with vibrant color accuracy and clarity."
+
+  utter_ask_specs_convertible_5in1_fridge_633:
+    - text: "633L Convertible 5in1 Fridge offers flexible storage options and energy efficiency."
+
+  utter_ask_specs_twin_cooling_plus_fridge_550:
+    - text: "550L Twin Cooling Plus Fridge maintains freshness with dual cooling systems."
+
+  utter_ask_specs_bespoke_flex_family_hub_fridge_810:
+    - text: "810L Bespoke Flex Family Hub Fridge has smart connectivity and customizable design."
+
+  utter_ask_specs_flex_bespoke_fridge_870:
+    - text: "870L 4-Door Flex Bespoke Fridge features modular storage and energy-saving technology."
+
+  utter_ask_specs_moisture_sensor_smart_oven_28:
+    - text: "28L Moisture Sensor Smart Oven adjusts cooking for perfect results."
+
+  utter_ask_specs_dough_proof_convection_microwave_21:
+    - text: "21L Dough Proof Convection Microwave Oven is ideal for baking and reheating."
+
+  utter_ask_specs_browning_plus_grill_microwave_23:
+    - text: "23L Browning Plus Grill Microwave Oven delivers crisp and even cooking."
+
+  utter_ask_specs_intensivewash_dishwasher:
+    - text: "IntensiveWash Dishwasher offers powerful cleaning with 13 place settings."
+
+  utter_ask_specs_inverter_split_ac_hot_cold:
+    - text: "Inverter Split AC Hot and Cold provides efficient cooling and heating options."
+
+  utter_ask_specs_windfree_inverter_split_ac:
+    - text: "WindFree Inverter Split AC cools without direct airflow for enhanced comfort."
+
+  utter_ask_specs_top_load_washer_10kg:
+    - text: "10kg Top Load Washing Machine includes AI wash technology for better cleaning."
+
+  utter_ask_specs_washer_dryer_combo_25kg:
+    - text: "25kg Washer Dryer Combo features AI-enabled drying and heat pump efficiency."
+
+  utter_ask_specs_front_load_washer_9kg:
+    - text: "9kg Front Load Washing Machine uses AI Ecobubble technology for gentle cleaning."
+
+  utter_ask_specs_galaxy_watch_ultra:
+    - text: "Galaxy Watch Ultra offers advanced health tracking and rugged design."
+
+  utter_ask_specs_galaxy_watch7:
+    - text: "Galaxy Watch7 provides comprehensive fitness tracking and smart features."
+
+  utter_ask_specs_galaxy_watch6_classic:
+    - text: "Galaxy Watch6 Classic combines traditional design with modern smartwatch features."
+
+  utter_ask_specs_galaxy_buds_core:
+    - text: "Galaxy Buds Core delivers immersive sound and noise cancellation."
+
+  utter_ask_specs_galaxy_buds3_pro:
+    - text: "Galaxy Buds3 Pro offers premium sound quality and advanced ANC."
+
+  utter_ask_specs_earphone_ehs64:
+    - text: "Samsung EHS64 Wired Stereo Headset features clear sound and microphone."
+
+  utter_ask_specs_galaxy_ring:
+    - text: "Galaxy Ring is a fitness tracker that monitors your health and activity."
+
+  utter_ask_specs_q_series_soundbar_q930f:
+    - text: "Q-series Soundbar Q930F delivers powerful 580W sound with Q-Symphony support."
+
+  utter_ask_specs_soundbar_s61b:
+    - text: "Soundbar S61B offers 200W rich sound for your home entertainment."
+
+  utter_ask_specs_sound_tower_st90b:
+    - text: "Sound Tower ST90B features 1700W powerful sound for parties and events."
+
+  utter_ask_specs_premiere_lpu9d_projector:
+    - text: "Premiere LPU9D Projector is an ultra-short throw 4K projector running Tizen OS."
+
+  utter_ask_specs_galaxy_tab_s8_fe:
+    - text: "Galaxy Tab S8 FE has a large display and strong performance for work and play."
+
+  utter_ask_specs_galaxy_s23_fe:
+    - text: "Galaxy S23 FE is a budget-friendly flagship with excellent camera capabilities."
+
+  utter_ask_specs_galaxy_watch5_pro:
+    - text: "Galaxy Watch5 Pro offers enhanced battery life and rugged design for adventurers."
+
+  utter_ask_specs_galaxy_buds2_pro:
+    - text: "Galaxy Buds2 Pro delivers premium sound quality with ANC and 360 audio."
+
+  utter_ask_specs_galaxy_s21_fe:
+    - text: "Galaxy S21 FE offers flagship features at a more affordable price point."
+
+  utter_ask_specs_galaxy_tab_a8:
+    - text: "Galaxy Tab A8 is perfect for media consumption and light productivity."
+
+  utter_ask_specs_galaxy_book2_pro_360:
+    - text: "Galaxy Book2 Pro 360 is a high-performance 2-in-1 laptop with excellent battery life."
+
+  utter_ask_specs_galaxy_tab_s7_plus:
+    - text: "Galaxy Tab S7 Plus has a large AMOLED screen and powerful Snapdragon chipset."
+
+  utter_ask_specs_galaxy_z_fold5:
+    - text: "Galaxy Z Fold5 features an improved folding mechanism and powerful hardware."
+
+  utter_ask_specs_galaxy_s22_ultra:
+    - text: "Galaxy S22 Ultra combines S-Pen functionality with a pro-grade camera system."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
