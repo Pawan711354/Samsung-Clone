@@ -1,0 +1,282 @@
+[
+  {
+    "name": "Galaxy S25 Ultra",
+    "image": "images/GNB_P3_176x176.avif",
+    "url": "Galaxy-S25-Ultra.html"
+  },
+  {
+    "name": "Galaxy S25 +",
+    "image": "images/Galaxy S25 Plus.avif",
+    "url": "Galaxy-S25.html"
+  },
+  {
+    "name": "Galaxy Tab S10 Ultra",
+    "image": "images/Galaxy Tab S10 Ultra.webp",
+    "url": "Galaxy-Tab-S10-Ultra.html"
+  },
+  {
+    "name": "Galaxy S25 Edge",
+    "image": "images/Galaxy S25 Edge.webp",
+    "url": "Galaxy-S25-Edge.html"
+  },
+  {
+    "name": "Galaxy S24 Ultra",
+    "image": "images/Galaxy S24 Ultra.webp",
+    "url": "Galaxy-S24-Ultra.html"
+  },
+  {
+    "name": "Galaxy S24 FE",
+    "image": "images/Galaxy S24 FE.webp",
+    "url": "Galaxy-S24-FE.html"
+  },
+  {
+    "name": "Galaxy Z Fold 6",
+    "image": "images/Galaxy Z Fold.avif",
+    "url": "Galaxy-Z-Fold6.html"
+  },
+  {
+    "name": "Galaxy Z Flip 6",
+    "image": "images/Galaxy Z Flip6.avif",
+    "url": "Galaxy-Z-Flip6.html"
+  },
+  {
+    "name": "Galaxy Tab S10 FE",
+    "image": "images/Galaxy Tab S10 FE.avif",
+    "url": "Tab-S10-FE.html"
+  },
+  {
+    "name": "Galaxy Z Flip 6",
+    "image": "images/Galaxy Z Flip6.avif",
+    "url": "Galaxy-Z-Flip6.html"
+  },
+  {
+    "name": "Galaxy Tab S9 FE ",
+    "image": "images/Galaxy Tab S9 FE.webp",
+    "url": "Galaxy-Tab-S9-FE.html"
+  },
+  {
+    "name": "Galaxy Tab A9",
+    "image": "images/Galaxy Tab.avif",
+    "url": "Galaxy-Tab-A9.html"
+  },
+  {
+    "name": "Galaxy Z Flip 6",
+    "image": "images/Galaxy Z Flip6.avif",
+    "url": "Galaxy-Z-Flip6.html"
+  },
+  {
+    "name": "Galaxy Book 5 Pro",
+    "image": "images/Galaxy Book5 Pro.webp",
+    "url": "Galaxy-Book5-Pro-360-4062-cm-Core-Ultra-7-16-GB-Intel-Arc-Graphics.html"
+  },
+  {
+    "name": "Galaxy Book 5",
+    "image": "images/Galaxy Book5.webp",
+    "url": "Galaxy-Book5-360-3962-cm-Core-Ultra-7-16-GB-Intel-Graphics.html"
+  },
+  {
+    "name": "68.5 cm (27) 1800R Curved Monitor with 100Hz refresh rate",
+    "image": "images/CUrved Monitor With 100Hz.avif",
+    "url": "685-cm-27-1800R-Curved-Monitor-with-100Hz-refresh-rate-game-mode-and-eye-saver.html"
+  },
+  {
+    "name": "Galaxy Book 4 Pro",
+    "image": "images/Galaxy Book4 Pro.webp",
+    "url": "Galaxy-Book4-Pro-360-4062-cm-Core-Ultra-7-16-GB-Intel-Arc-Graphics.html"
+  },
+  {
+    "name": "Galaxy Book 4",
+    "image": "images/Galaxy Book4.webp",
+    "url": "Galaxy-Book4-3962-cm-Intel-Core-i7-16-GB-Intel-Iris-Xe-Graphics.html"
+  },
+  {
+    "name": "1.24 m (49) Odyssey OLED G9 2K DQHD Gaming Monitor",
+    "image": "images/Gaming Monitor With 240Hz.avif",
+    "url": "124-m-49-Odyssey-OLED-G9-2K-DQHD-Gaming-Monitor-with-240Hz-refresh-rate.html"
+  },
+  {
+    "name": "Galaxy Book 3",
+    "image": "images/Galaxy Book3.avif",
+    "url": "Galaxy-Book3-360-3378-cm-i7-16-GB-Intel-Xe-Graphics.html"
+  },
+  {
+    "name": "68.5 cm (27) Odyssey 3D 4K Gaming Monitor with AI 3D Video Conversion",
+    "image": "images/Gaming Monitor With AI 3D.avif",
+    "url": "685-cm-27-Odyssey-3D-4K-Gaming-Monitor-with-AI-3D-Video-Conversion.html"
+  },
+  {
+    "name": "80 cm (32) M7 UHD 4K Smart Monitor with Smart TV experience",
+    "image": "images/Smart TV Monitor.webp",
+    "url": "80-cm-32-M7-UHD-4K-Smart-Monitor-with-Smart-TV-experience.html"
+  },
+  {
+    "name": "2.14 m (85) Neo QLED QN950F 8K Samsung Vision AI Smart TV",
+    "image": "images/Neo QLED.avif",
+    "url": "214-m-85-Neo-QLED-QN950F-8K-Samsung-Vision-AI-Smart-TV.html"
+  },
+  {
+    "name": "1.89 m (75) Neo QLED 4K QN90D Smart AI TV (2024)",
+    "image": "images/Neo QLED 4K.avif",
+    "url": "189-m-75-Neo-QLED-4K-QN90D-Smart-AI-TV-2024.html"
+  },
+  {
+    "name": "1.89 m (75) Crystal UHD DU8300 4K Smart TV (2024)",
+    "image": "images/Crystal UHD.avif",
+    "url": "189-m-75-Crystal-UHD-DU8300-4K-Smart-TV-2024.html"
+  },
+  {
+    "name": "633 L Convertible 5in1 Side by Side Refrigerator",
+    "image": "images/5IN1 Size By.avif",
+    "url": "633-L-Convertible-5in1-Side-by-Side-Refrigerator-RS78CG8543S9.html"
+  },
+  {
+    "name": "550 L Twin Cooling Plus™ French Door Refrigerator",
+    "image": "images/Twin Cooling Plus.webp",
+    "url": "550-L-Twin-Cooling-Plus-French-Door-Refrigerator-RF57A5032S9.html"
+  },
+  {
+    "name": "810 L Bespoke 4-Door Flex Family Hub™ French Door Refrigerator",
+    "image": "images/French Door.avif",
+    "url": "810-L-Bespoke-4Door-Flex-Family-Hub-French-Door-Refrigerator-RF87A9770SG.html"
+  },
+  {
+    "name": "870 L 4-Door Flex French Door Bespoke Refrigerator",
+    "image": "images/French Door Bespoke.webp",
+    "url": "870-L-4Door-Flex-French-Door-Bespoke-Refrigerator-RF90A92W3AP-without-Bespoke-Panels.html"
+  },
+  {
+    "name": "28 L Moisture Sensor Smart Oven",
+    "image": "images/Sensor Smart Oven.avif",
+    "url": "28-L-Moisture-Sensor-Smart-Oven-MC28A5147VK.html"
+  },
+  {
+    "name": "21 L Dough Proof Convection Microwave Oven",
+    "image": "images/Dough Proof Oven.webp",
+    "url": "21-L-Dough-Proof-Convection-Microwave-Oven-CE76JDMBR.html"
+  },
+  {
+    "name": "23 L Browning Plus Grill Microwave Oven",
+    "image": "images/Browing Plus Grill.avif",
+    "url": "23-L-Browning-Plus-Grill-Microwave-Oven-MG23A3515AK.html"
+  },
+  {
+    "name": "IntensiveWash™ Dishwasher with 13 Place Settings",
+    "image": "images/Dishwasher With 13.avif",
+    "url": "IntensiveWash-Dishwasher-with-13-Place-Settings-DW60M6043FS.html"
+  },
+  {
+    "name": "Inverter Split AC (Hot & Cold)",
+    "image": "images/Split AC.avif",
+    "url": "Inverter-Split-AC-Hot-Cold-AR50F19C1XH-500-kW-15-3-Star.html"
+  },
+  {
+    "name": "WindFree™ Inverter Split AC",
+    "image": "images/Wind Free.avif",
+    "url": "WindFree-Inverter-Split-AC-AR60F19D15W-500-kW-15-5-Star-2025-AR50F19C1XH-500-kW-15-3-Star.html"
+  },
+  {
+    "name": "10kg Top Load Washing Machine with AI Wash and Super Speed",
+    "image": "images/Top Load.webp",
+    "url": "100-kg-Top-Load-Washing-Machine-with-AI-Wash-and-Super-Speed-WA80F10S2C.html"
+  },
+  {
+    "name": "25kg AI Enabled Washer Dryer Combo with Heat Pump Technology",
+    "image": "images/Washer Dryer.webp",
+    "url": "250-kg-AI-Enabled-Washer-Dryer-Combo-with-Heat-Pump-Technology-WD25DB8995BZ.html"
+  },
+  {
+    "name": "9kg Front Load Washing Machine with AI Ecobubble & Hygiene Steam",
+    "image": "images/Front Load.avif",
+    "url": "90-kg-Front-Load-Washing-Machine-with-AI-Ecobubble-Hygiene-Steam-WW90DG5U24AX.html"
+  },
+  {
+    "name": "Galaxy Watch Ultra",
+    "image": "images/Galaxy Watch U.avif",
+    "url": "Galaxy-Watch-Ultra-LTE-47-cm.html"
+  },
+  {
+    "name": "Galaxy Watch7",
+    "image": "images/Galaxy Watch 7.avif",
+    "url": "Galaxy-Watch7-Bluetooth-44-cm.html"
+  },
+  {
+    "name": "Galaxy Watch6 Classic",
+    "image": "images/Galaxy Watch 6.avif",
+    "url": "Galaxy-Watch6-Classic-Bluetooth-43-cm.html"
+  },
+  {
+    "name": "Galaxy Buds Core",
+    "image": "images/Galaxy Buds.webp",
+    "url": "Galaxy-Buds-Core.html"
+  },
+  {
+    "name": "Samsung EHS64 Wired Stereo Headset",
+    "image": "images/Samsung Wired.avif",
+    "url": "Samsung-EHS64-Wired-Stereo-Headset-with-Remote-and-Mic.html"
+  },
+   {
+    "name": "Galaxy Buds3 Pro",
+    "image": "images/Galaxy Buds 3.avif",
+    "url": "Galaxy-Buds3-Pro.html"
+  },
+   {
+    "name": "Galaxy Ring",
+    "image": "images/Galaxy Ring.avif",
+    "url": "Galaxy-Ring.html"
+  },
+   {
+    "name": "Galaxy S25 Edge Anti-reflecting Film",
+    "image": "images/Tempered.avif",
+    "url": "Galaxy-S25-Edge-Antireflecting-Film.html"
+  },
+   {
+    "name": "Galaxy S25 Edge Silicone Case",
+    "image": "images/Silicone Case.webp",
+    "url": "Galaxy-S25-Edge-Silicone-Case.html"
+  },
+   {
+    "name": "Power Bank 20000 mAh",
+    "image": "images/Power Bank.avif",
+    "url": "Power-Bank-20000-mAh-with-Charging-Cable.html"
+  },
+   {
+    "name": "45 W Type-C Travel Adaptor Without Cable",
+    "image": "images/Travel Adapter.avif",
+    "url": "45-W-TypeC-Travel-Adaptor-Without-Cable.html"
+  },
+   {
+    "name": "Galaxy Watch7 Athleisure Band",
+    "image": "images/Watch 7 Band.avif",
+    "url": "Galaxy-Watch7-Athleisure-Band-ML.html"
+  },
+   {
+    "name": "Multiport Adapter",
+    "image": "images/Multiport.avif",
+    "url": "Multiport-Adapter.html"
+  },
+   {
+    "name": "Q-series Soundbar 580W",
+    "image": "images/Sound Bar.webp",
+    "url": "Qseries-Soundbar-580W-914-Ch-QSymphony-with-Wireless-Dolby-Atmos-Q930F.html"
+  },
+   {
+    "name": "Soundbar 200W 5.0ch S61B",
+    "image": "images/Soundbar.webp",
+    "url": "Soundbar-200W-50ch-S61B.html"
+  },
+   {
+    "name": "1700W Sound Tower ST90B",
+    "image": "images/Sound Tower.webp",
+    "url": "1700W-Sound-Tower-ST90B.html"
+  },
+   {
+    "name": "The Premiere LPU9D 4K Tizen OS Ultra-short throw Projector",
+    "image": "images/Premiere Projector.webp",
+    "url": "The-Premiere-LPU9D-4K-Tizen-OS-Ultrashort-throw-Projector.html"
+  },
+  {
+    "name": "Galaxy Watch 8",
+    "image": "images/Galaxy Watch 8.jpg",
+    "url": "Galaxy-Watch-8.html"
+  }
+]

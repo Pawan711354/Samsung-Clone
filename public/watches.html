@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laptops - Samsung Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+    }
+    header, footer {
+      background: hsl(30, 12%, 94%);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+      color: rgb(0, 0, 0);
+    }
+    footer img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+    .image-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.image-dot:hover {
+  transform: scale(1.2);
+}
+
+
+/*Section 7 */
+  .buy-btn {
+    display: none;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #90a3b7;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .item-card:hover .buy-btn {
+    display: inline-block;
+  }
+
+  .buy-btn:hover {
+    background-color: #5c5e61;
+  }
+
+  /* ==================== Information Section ==================== */
+.information-section {
+    background: #f9f9f9;
+    padding: 3em 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 2em;
+    border-top: 1px solid #ddd;
+}
+
+.information-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8em;
+    color: #222;
+    font-weight: bold;
+}
+
+.information-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.information-section ul li {
+    margin: 0.4em 0;
+}
+
+.information-section ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.information-section ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 992px) {
+    .information-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+    }
+}
+@media (max-width: 576px) {
+    .information-section {
+        grid-template-columns: 1fr; /* Stack into 1 column on phones */
+    }
+}
+.information-section ul li {
+    margin: 0.8em 0; /* Increase vertical spacing between items */
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  <img src="images/Samsung_Orig_Wordmark_BLUE_RGB.png" alt="Samsung Logo" style="width: 180px;" />
+  <div style="display: flex; align-items: center; gap: 1.5rem;">
+    <a href="index.html">Home</a>
+    <!-- Search -->
+    <div id="searchContainer" style="position: relative;">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        oninput="handleLiveSearch()"
+        style="padding: 0.5rem 1rem; border: 1px solid #ccc; border-radius: 20px; font-size: 1rem; width: 250px;"
+      />
+      <div id="suggestions"
+           style="position: absolute; background: #fff; width: 100%; top: 100%; left: 0; border: 1px solid #ccc; border-radius: 10px; display: none; z-index: 999;">
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- Section 01: Background Video Section -->
+<section style="position: relative; height: 100vh; overflow: hidden;">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+    <source src="videos/Video Laptop.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay Content -->
+  <div style="position: relative; z-index: 1; color: white; text-align: center; top: 50%; transform: translateY(-50%); padding: 2rem;">
+    <h1 style="font-size: 3rem;">Galaxy Laptops</h1>
+    <p style="font-size: 1.2rem;">Explore the new Galaxy Book series with powerful performance</p>
+  </div>
+</section>
+
+<div style="height: 40px; background-color: #f2eded;"></div>
+  
+<section style="
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  background-image: url('images/Watch.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+">
+  <h2 style="
+    font-size: 76px;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+  ">
+   Ultra comfort
+from sleep to workout
+  </h2>
+
+  <p style="
+    font-size: 21px;
+    max-width: 600px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: rgb(158, 155, 155);
+  ">
+    The thinnest Samsung Galaxy Watch yet, Galaxy Watch8 is ready to make an impact. Now, boldly reimagined — from the iconic new cushion design to the Dynamic Lug System for the snug, comfortable fit — all while performing powerfully with the 3 nm processor. Experience proactive coaching, from sleep to running to holistic health, that fuses intelligence with individuality. Make the most of your moments with Galaxy AI keeping you ahead, topped with a whole-new One UI experience.
+  </p>
+</section>
+
+<div style="height: 40px; background-color: #ffffff;"></div>
+
+<!-- Section 4 -->
+  <section style="padding: 4rem 2rem; text-align: center; background: #ffffff;">
+  <!-- Top middle description -->
+  <h2 style="color: rgb(0, 0, 0); font-size: 6rem; margin-bottom: 2rem;">
+    Slim.
+  </h2>
+  <p style="margin-top: 1rem; font-size: 5.5rem; color: #000000;">
+   Snug.
+   Smart.
+  </p>
+
+  <div style="max-width: 1200px;height: 100vh;  margin: 0 auto;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; border-radius: 12px; ">
+      data-src-pc="//image-us.samsung.com/us/watches/galaxy-watch8/images/galaxy-watch8-unveil.mp4" data-src-mobile="//image-us.samsung.com/us/watches/galaxy-watch8/images/galaxy-watch8-unveil-mo.mp4" data-media-loaded="" style="width: 1745px; height: 671px;"><source type="video/webm" src="//image-us.samsung.com/us/watches/galaxy-watch8/images/galaxy-watch8-unveil.webm"><source type="video/mp4" src="//image-us.samsung.com/us/watches/galaxy-watch8/images/galaxy-watch8-unveil.mp4"></video>
+  </div>
+
+  <h2 style="color: white; font-size: 2rem; margin-bottom: 2rem;">
+    Revisit, rediscover, re-engage with Recall
+  </h2>
+  <p style="margin-top: 1rem; font-size: 1.2rem; color: #ffffff;">
+   Explore your PC's history and quickly find what you need with Recall — like those inspiring designs you saw on the web a while back. Scan through snapshots in the timeline to get relevant results and related docs.
+  </p>
+
+  <div style="max-width: 1200px;height: 70vh;  margin: 0 auto;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; border-radius: 12px; ">
+      <source src="videos/Book 02.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+  <!-- Section 5 -->
+
+<section style="padding: 4rem 2rem; text-align: center; background: #ffffff;">
+  <!-- Top middle description -->
+  <h2 style="color: rgb(0, 0, 0); font-size: 5rem; margin-bottom: 2rem;">
+    New design.
+
+  </h2>
+  <p style="margin-top: 0rem; font-size: 5rem; color: rgb(0, 0, 0);">
+   Elevated feel.
+  </p>
+  <p style="margin-top: 0rem; font-size: 1.2rem; color: #000000;">
+   Time for a change. The new cushion shape adds a distinctive edge to any look. With sleek lines that won't get in the way of workouts, Galaxy Watch8 maximizes your days with minimalist design. Available in 40mm and 44mm case sizes, in Graphite and Silver.
+  </p>
+
+  <!-- Center image -->
+  <div style="display: flex; justify-content: center; margin-bottom: 2rem;color: #000000;">
+    <img src="images/Galaxy Watch8 3.jpg" alt="Center Image" style="width: 100%; border-radius: 10px;" />
+  </div>
+
+</section>
+
+<div style="height: 40px; background-color: #ffffff;">
+</div>
+
+  <!-- Section 6 -->
+<section id="section-6" style="padding: 60px 20px; background-color: #ffffff; margin-top: 0px;">
+  <div style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row-reverse;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="images/Galaxy Watch8 4.jpg.jpg" alt="Right Image" style="width: 100%; max-width: 800px; border-radius: 10px;height: 70vh;" />
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+      <h2 style="font-size: 3rem; margin-bottom: 20px;color: #000000;">Refresh your mind</h2>
+      <p style="font-size: 1.3rem; line-height: 1.4;color: #000000;">
+        Galaxy Watch8 offers tools to gently guide you toward mindfulness, from managing stress to living in the moment. Explore different techniques and discover what works best to support your mental well-being. Keep a daily log to monitor your journey to find peace.
+      </p>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 60px;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="images/Galaxy wtach8 5.jpg" alt="Left Image" style="width: 100%; max-width: 800px; border-radius: 10px;height: 90vh;" />
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+      <h2 style="font-size: 3rem; margin-bottom: 20px; color: #000000;">Time to upgrade withtrade-in</h2>
+      <p style="font-size: 1.3rem; line-height: 1.6; color: #000000;">
+       Simply trade in your old device and receive immediate savings for your new Galaxy Watch8. 
+      </p>
+    </div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row-reverse;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="images/Galaxy Watch8 6.jpg" alt="Right Image" style="width: 100%; max-width: 800px; border-radius: 10px;height: 90vh;" />
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+      <h2 style="font-size: 3rem; margin-bottom: 20px;color: #000000;">Watch pairs with your Android smartphone27</h2>
+      <p style="font-size: 1.3rem; line-height: 1.4;color: #000000;">
+        Galaxy Watch works seamlessly with Samsung phones and also works with other Android phones.27 Download the Galaxy Wearable and Samsung Health apps to get started using Galaxy Watch with your device.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div style="height: 40px; background-color: #ffffff;"></div>
+
+<section
+  style="
+    background-image: url('images/Galaxy\ Watch8\ Background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200vh;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  "
+>
+ <div style="
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  ">
+    <h1 style="font-size: 5rem; margin: 0;">Galaxy Watch 8</h1>
+    <p style="font-size: 3rem; margin: 0.5rem 0 2rem;">
+    </p>
+  </div>
+</section>
+
+<div style="height: 40px; background-color: #ffffff;"></div>
+
+<!-- Section 8 -->
+<section id="section-8" style="padding: 4rem 2rem; background-color: #ffffff;">
+  <!-- Top Middle Description -->
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 6rem; color: #000000;">Time to find your Watch</h2>
+
+  <!-- Scrollable Items Container -->
+  <div style="display: flex; overflow-x: auto; gap:6.5rem; scroll-snap-type: x mandatory; padding-bottom: 1rem;">
+    
+    <!-- Item 1 -->
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Watch 8.jpg" alt="Galaxy Tab S10 Ultra" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #151414;">Galaxy Watch 8 </h4>
+      <a href="Galaxy-Watch-8.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Watch U.avif" alt="Galaxy Tab S10 FE +" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #000000;">Galaxy Watch Ultra</h4>
+      <a href="Galaxy-Watch-Ultra-LTE-47-cm.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Watch 7.avif" alt="Galaxy Tab S9 FE" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #151414;">Galaxy Watch 7</h4>
+      <a href="Galaxy-Watch7-Bluetooth-44-cm.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images//Galaxy Watch 6.avif" alt="Galaxy Tab A9" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #151414;">Galaxy Watch 6 Classic</h4>
+      <a href="Galaxy-Watch6-Classic-Bluetooth-43-cm.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Ring.avif" alt="Galaxy Tab A9" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #151414;">Galaxy Ring</h4>
+      <a href="Galaxy-Ring.html" class="buy-btn">Buy Now</a>
+    </div>
+     </div>
+
+     <!-- See More Button -->
+<div style="text-align: center; margin-top: 40px;">
+  <a href="shop-now.html" style="
+    background-color: #cac5c5;
+    color: rgb(255, 255, 255);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  " onmouseover="this.style.backgroundColor='#cac5c5'" onmouseout="this.style.backgroundColor='#cac5c5'">
+    See More
+  </a>
+</div>
+</section>
+
+<div style="height: 40px; background-color: #ffffff;"></div>
+
+<!-- Information Section -->
+    <section class="information-section">
+        <div class="info-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Leadership & Mission</a></li>
+                <li><a href="#">Our Business</a></li>
+                <li><a href="#">Brand Identity</a></li>
+                <li><a href="#">Careers </a></li>
+                <li><a href="#">Investor Relations </a></li>
+                <li><a href="#">Newsroom </a></li>
+                <li><a href="#">Ethics </a></li>
+                <li><a href="#">Samsung Designs </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Chat With Us</a></li>
+                <li><a href="#">Order Help</a></li>
+                <li><a href="#">Product Help</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Register Your Account </a></li>
+                <li><a href="#">Request a Repair </a></li>
+                <li><a href="#">Contact Us </a></li>
+                <li><a href="#">Samsung Community </a></li>
+                <li><a href="#">Feedbacks </a></li>
+                <li><a href="#">Manual & Software </a></li>
+                <li><a href="#">Slide-In Electronic Range Recall </a></li>
+                <li><a href="#">Returns </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Offers</h4>
+            <ul>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Samsung Rewards</a></li>
+                <li><a href="#">Education Offer Program</a></li>
+                <li><a href="#">Government Offer Program</a></li>
+                <li><a href="#">Military Offer Program </a></li>
+                <li><a href="#">Employee Offer Program </a></li>
+                <li><a href="#">First Responder Offer Program </a></li>
+                <li><a href="#">Business Offer Program </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Sustainability</h4>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Environment</a></li>
+                <li><a href="#">Digital Responsibility</a></li>
+                <li><a href="#">Security And Privacy</a></li>
+                <li><a href="#">Accessibility </a></li>
+                <li><a href="#">Labour & Human Rights </a></li>
+                <li><a href="#">Conflict Minerals</a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Locations</h4>
+            <ul>
+                <li><a href="#">Asia Pacific</a></li>
+                <li><a href="#">Europe</a></li>
+                <li><a href="#">Middle East & Africa</a></li>
+                <li><a href="#">Latin America </a></li>
+                <li><a href="#">North America </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Samsung.com </a></li>
+                <li><a href="#">Samsung Experience Store </a></li>
+                <li><a href="#">Samsung Shop </a></li>
+                <li><a href="#">Samsung Setup </a></li>
+                <li><a href="#">Samsung TV Plus </a></li>
+                <li><a href="#">Samsung Care+</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <img src="images/Samsung_Orig_Wordmark_BLUE_RGB.png" alt="Samsung Logo" />
+    <p>&copy; 2025 Samsung Clone</p>
+    <p>All Rights Reserved</p>
+  </footer>
+
+
+<script>
+
+  const images = [
+    "images/Book Section 02 01.jpg",
+    "images/Book Section 02 02.jpg",
+    "images/Book Section 02 03.jpg",
+    "images/Book Section 02 04.jpg"
+  ];
+
+  function changeLaptopImage(index) {
+    const mainImage = document.getElementById("mainLaptopImage");
+    mainImage.style.opacity = "0";
+
+    setTimeout(() => {
+      mainImage.src = images[index];
+      mainImage.style.opacity = "1";
+    }, 300); // matches the transition speed
+  }
+ let products = [];
+
+  // Fetch products from JSON file
+  fetch('products.json')
+    .then(res => res.json())
+    .then(data => {
+      products = data;
+    })
+    .catch(error => {
+      console.error("Failed to load product data:", error);
+    });
+
+  function handleLiveSearch() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const suggestions = document.getElementById("suggestions");
+    suggestions.innerHTML = "";
+
+    if (!input) {
+      suggestions.style.display = "none";
+      return;
+    }
+
+    const matches = products.filter(p =>
+      p.name.toLowerCase().includes(input)
+    );
+
+    if (matches.length > 0) {
+      matches.forEach(product => {
+        const div = document.createElement("div");
+        div.style.display = "flex";
+        div.style.alignItems = "center";
+        div.style.padding = "10px";
+        div.style.cursor = "pointer";
+        div.innerHTML = `
+          <img src="${product.image}" style="width: 40px; height: 40px; border-radius: 5px; margin-right: 10px;">
+          <span>${product.name}</span>
+        `;
+        div.onclick = () => {
+          window.location.href = product.url;
+        };
+        suggestions.appendChild(div);
+      });
+      suggestions.style.display = "block";
+    } else {
+      suggestions.innerHTML = "<div style='padding: 10px;'>No results found</div>";
+      suggestions.style.display = "block";
+    }
+  } 
+</script>
+</body>
+</html>
