@@ -1,0 +1,743 @@
+<!-- Samsung-Galaxy-S25-Ultra.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>68.5 cm (27) Odyssey 3D 4K Gaming Monitor with AI 3D Video Conversion</title>
+  <style>
+    /* ======== Shared Header (Same as shop-now.html but without search bar) ======== */
+.shop-header {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+
+.shop-header .logo {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  background: transparent;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: #ccc;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  color: #000;
+  background: #ddd;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.cart-icon:hover {
+  background: #aaa;
+}
+
+.cart-icon-counter {
+  position: relative;
+}
+
+.cart-icon-counter span {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* ========== Cart Popup ========== */
+.cart-popup {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 450px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+  display: none;
+  z-index: 999;
+  color: rgb(0, 0, 0);
+}
+
+.cart-popup h3 {
+  margin-top: 0;
+  color: #242627;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cart-item img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-summary {
+  border-top: 1px solid #444;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ========== Product Details Layout ========== */
+main {
+  padding: 2rem;
+}
+
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.product-detail img {
+  max-width: 40%;
+  min-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.product-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.add-button {
+  padding: 0.7rem 1.5rem;
+  background-color: #005bb5;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #003f7d;
+}
+
+.product-image-carousel {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.product-image-carousel img {
+  width: 100%;
+  max-width: 800px; /* Increase this value to make it larger */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dot-indicators {
+  margin-top: 1rem;
+}
+
+.dot {
+  height: 14px;
+  width: 14px;
+  margin: 0 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot:hover,
+.dot.active {
+  background-color: #000;
+}
+.product-options {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.option-group {
+  margin-bottom: 1rem;
+}
+
+.option-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.color-options {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.color-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.color-swatch:hover,
+.color-swatch.selected {
+  border: 2px solid #000;
+}
+
+select#storageSelect {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.samsung-care-section {
+  background-color: #f7f7f7;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.samsung-care-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.care-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.care-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.care-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #003b6f;
+}
+
+.care-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.care-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .care-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* ==================== Information Section ==================== */
+.information-section {
+    background: #f9f9f9;
+    padding: 3em 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 2em;
+    border-top: 1px solid #ddd;
+}
+
+.information-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8em;
+    color: #222;
+    font-weight: bold;
+}
+
+.information-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.information-section ul li {
+    margin: 0.4em 0;
+}
+
+.information-section ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.information-section ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+    @media (max-width: 1024px) {
+      .product-card {
+        flex: 0 0 48%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .product-card {
+        flex: 0 0 100%;
+      }
+    }
+
+    .button-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.option-btn {
+  padding: 0.5rem 1rem;
+  background: #eee;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.option-btn:hover {
+  background: #ddd;
+}
+
+.option-btn.selected {
+  border-color: #b9b6b6;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+
+    /* Footer */
+footer {
+    background:transparent;
+    color: #000000;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+
+
+}
+footer .footer-logo {
+  width: 120px;   /* adjust width as needed */
+  height: auto;   /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto 10px auto;  /* centers and adds spacing below */
+}
+  </style>
+</head>
+<body>
+  <header class="shop-header">
+    <img src="images/Samsung_Orig_Wordmark_BLUE_RGB.png" alt="Samsung Logo" class="logo" />
+
+    <nav class="nav-links">
+      <a href="index.html" class="home-btn">Home</a>
+      <a href="shop-now.html#mobiles" class="home-btn">Mobile</a>
+      <a href="shop-now.html#computers" class="home-btn">Computers, Displays & TVs</a>
+      <a href="shop-now.html#home-appliances" class="home-btn">Appliances</a>
+      <a href="shop-now.html#others" class="home-btn">Audio & Other Products</a>
+    </nav>
+
+    <a href="javascript:void(0)" class="cart-icon cart-icon-counter" onclick="toggleCart()">🛒<span id="cartCount">0</span></a>
+  </header>
+
+  <div class="cart-popup" id="cartPopup">
+  <h3>Your Cart</h3>
+  <div id="cartItems"></div>
+  <div class="cart-summary">
+    Total Items: <span id="itemCount">0</span><br>
+    Grand Total: <span id="grandTotal">$0</span><br><br>
+    <button id="checkoutBtn" style="padding: 8px 16px; background-color: #0074e4; color: white; border: none; border-radius: 4px; cursor: pointer;">Go to Checkout</button>
+  </div>
+</div>
+
+  <main style="padding: 2rem;">
+    <div class="product-detail">
+  <div class="product-image-carousel">
+  <img id="mainProductImage" src="images/Odyssey 2D Home.avif" alt="68.5 cm (27) Odyssey 3D 4K Gaming Monitor with AI 3D Video Conversion">
+
+
+
+  <div class="dot-indicators">
+<span onclick="changeImage('images/Odyssey 3D 1.webp')" class="dot active"></span>
+    <span onclick="changeImage('images/Odyssey 3D 2.avif')" class="dot"></span>
+    <span onclick="changeImage('images/Odysse 3D 3.avif')" class="dot"></span>
+    <span onclick="changeImage('images/Odyssey 2D Home.avif')" class="dot"></span>
+  </div>
+</div>
+
+  <div class="product-info">
+    <h1>68.5 cm (27) Odyssey 3D 4K Gaming Monitor with AI 3D Video Conversion</h1>
+    <h2>From</h2>
+    <p>27" $999</p>
+    <p>Break down the barriers between imagination and reality with the industry's best 3D picture quality. Immerse yourself in a diverse array of 3D gaming experiences across genres with stunning 3D effects on a 4K screen — all without the need for special glasses, thanks to eye-tracking technology and view mapping algorithms.</p>
+    <button class="add-button" onclick="handleAddToCart()">Add to Cart</button>
+
+  </div>
+</div>
+<!-- Color Selection -->
+<div class="product-options">
+  <div class="option-group">
+    <label>Color:</label>
+    <div class="color-options">
+      <span class="color-swatch selected" style="background-color: rgb(99, 99, 99);" data-color="Silver" data-img="images/Odyssey 3D 1.webp"></span>
+    </div>
+  </div>
+
+   <!-- Storage Selection -->
+  <div class="option-group">
+    <label>Screen Size:</label>
+   <select id="storageSelect" onchange="updateDisplayedPrice()">
+    <option value="27-Inhes" data-price="999">27" - $999</option>
+</select>
+  </div>
+
+
+<section class="samsung-care-section">
+  <h2>Samsung Care</h2>
+  <div class="care-cards">
+    <div class="care-card">
+      <h3>Extended Warranty</h3>
+      <p>Get peace of mind with an extended warranty that covers repairs beyond the standard coverage.</p>
+    </div>
+    <div class="care-card">
+      <h3>Accidental Damage Protection</h3>
+      <p>Protect your device from unexpected drops, spills, and cracked screens with our damage protection plans.</p>
+    </div>
+    <div class="care-card">
+      <h3>Free Pickup & Delivery</h3>
+      <p>We pick up your device and deliver it back after service—absolutely free of charge.</p>
+    </div>
+    <div class="care-card">
+      <h3>24/7 Customer Support</h3>
+      <p>Need help? Our support experts are available around the clock to assist with any issue.</p>
+    </div>
+  </div>
+</section>
+ <!-- Information Section -->
+    <section class="information-section">
+        <div class="info-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Leadership & Mission</a></li>
+                <li><a href="#">Our Business</a></li>
+                <li><a href="#">Brand Identity</a></li>
+                <li><a href="#">Careers </a></li>
+                <li><a href="#">Investor Relations </a></li>
+                <li><a href="#">Newsroom </a></li>
+                <li><a href="#">Ethics </a></li>
+                <li><a href="#">Samsung Designs </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Chat With Us</a></li>
+                <li><a href="#">Order Help</a></li>
+                <li><a href="#">Product Help</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Register Your Account </a></li>
+                <li><a href="#">Request a Repair </a></li>
+                <li><a href="#">Contact Us </a></li>
+                <li><a href="#">Samsung Community </a></li>
+                <li><a href="#">Feedbacks </a></li>
+                <li><a href="#">Manual & Software </a></li>
+                <li><a href="#">Slide-In Electronic Range Recall </a></li>
+                <li><a href="#">Returns </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Offers</h4>
+            <ul>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Samsung Rewards</a></li>
+                <li><a href="#">Education Offer Program</a></li>
+                <li><a href="#">Government Offer Program</a></li>
+                <li><a href="#">Military Offer Program </a></li>
+                <li><a href="#">Employee Offer Program </a></li>
+                <li><a href="#">First Responder Offer Program </a></li>
+                <li><a href="#">Business Offer Program </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Sustainability</h4>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Environment</a></li>
+                <li><a href="#">Digital Responsibility</a></li>
+                <li><a href="#">Security And Privacy</a></li>
+                <li><a href="#">Accessibility </a></li>
+                <li><a href="#">Labour & Human Rights </a></li>
+                <li><a href="#">Conflict Minerals</a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Locations</h4>
+            <ul>
+                <li><a href="#">Asia Pacific</a></li>
+                <li><a href="#">Europe</a></li>
+                <li><a href="#">Middle East & Africa</a></li>
+                <li><a href="#">Latin America </a></li>
+                <li><a href="#">North America </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Samsung.com </a></li>
+                <li><a href="#">Samsung Experience Store </a></li>
+                <li><a href="#">Samsung Shop </a></li>
+                <li><a href="#">Samsung Setup </a></li>
+                <li><a href="#">Samsung TV Plus </a></li>
+                <li><a href="#">Samsung Care+</a></li>
+            </ul>
+        </div>
+    </section>
+  </main>
+
+  <script>
+    const cartKey = "samsungCart";
+    let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+    function saveCart() {
+      localStorage.setItem(cartKey, JSON.stringify(cart));
+    }
+
+  function addToCart(title, price, img, color, storage, screenSize, processor) {
+  cart.push({
+    title,
+    price: parseFloat(price.replace('$', '')),
+    img,
+    color,
+    storage,
+    screenSize,
+  });
+  saveCart();
+  updateCartUI();
+}
+
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      saveCart();
+      updateCartUI();
+    }
+
+    function toggleCart() {
+      const popup = document.getElementById('cartPopup');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function updateCartUI() {
+      const cartItems = document.getElementById('cartItems');
+      const itemCount = document.getElementById('itemCount');
+      const grandTotal = document.getElementById('grandTotal');
+      const cartCount = document.getElementById('cartCount');
+
+      cartItems.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+       div.innerHTML = `
+  <img src="${item.img}" alt="${item.title}" />
+  <div class="cart-item-details">
+  <strong>${item.title}</strong><br/>
+  Color: ${item.color || "N/A"}<br/>
+  Screen Size: ${item.storage || "N/A"}<br/>
+</div>
+<div class="cart-item-price">
+  $${item.price.toFixed(2)}
+</div>
+
+  <button onclick="removeFromCart(${index})" style="background:#ff4d4d; border:none; color:white; font-size:0.7rem; padding:2px 6px; border-radius:50%; cursor:pointer;">✖</button>
+`;
+        cartItems.appendChild(div);
+      });
+
+      itemCount.textContent = cart.length;
+      grandTotal.textContent = `$${total.toFixed(2)}`;
+      cartCount.textContent = cart.length;
+    }
+  function changeImage(imgSrc) {
+    document.getElementById('mainProductImage').src = imgSrc;
+
+    // update active dot
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    event.target.classList.add('active');
+  }
+  
+  document.querySelectorAll('.color-swatch').forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+      swatch.classList.add('selected');
+    });
+  });
+  const swatches = document.querySelectorAll('.color-swatch');
+  const mainImage = document.getElementById('mainProductImage');
+
+  swatches.forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      // Remove 'selected' class from all
+      swatches.forEach(s => s.classList.remove('selected'));
+      // Add 'selected' to current
+      swatch.classList.add('selected');
+
+      // Change main image source
+      const newImg = swatch.getAttribute('data-img');
+      mainImage.src = newImg;
+    });
+  });
+  
+ function handleAddToCart() {
+  const title = "68.5 cm (27) Odyssey 3D 4K Gaming Monitor with AI 3D Video Conversion";
+  const img = document.getElementById("mainProductImage").src;
+
+  const selectedColorSwatch = document.querySelector('.color-swatch.selected');
+  const color = selectedColorSwatch ? selectedColorSwatch.getAttribute('data-color') : 'N/A';
+
+  const storage = document.getElementById('storageSelect')?.value || 'N/A';
+  const screenSize = document.querySelector('#screenSizeOptions .selected')?.dataset.size || 'N/A';
+  const processor = document.querySelector('#processorOptions .selected')?.dataset.processor || 'N/A';
+
+  let price = '$999';
+  addToCart(title, price, img, color, storage, screenSize, processor);
+  alert('Item added to cart!');
+}
+
+function updateDisplayedPrice() {
+  const storageSelect = document.getElementById('storageSelect');
+  const price = storageSelect.options[storageSelect.selectedIndex].dataset.price;
+  document.getElementById('dynamicPrice').textContent = `$${price}`;
+}
+document.addEventListener('DOMContentLoaded', () => {
+  updateDisplayedPrice(); // Set initial price
+
+  const checkoutBtn = document.getElementById('checkoutBtn');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      window.location.href = 'checkout.html';
+    });
+  }
+});
+document.addEventListener('DOMContentLoaded', () => {
+    // Attach checkout event
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    if (checkoutBtn) {
+      checkoutBtn.addEventListener('click', () => {
+        window.location.href = 'checkout.html';
+      });
+    }
+
+    updateDisplayedPrice(); // Ensure price is set when page loads
+    updateCartUI(); // Rebuild cart UI
+  });
+
+  // Handle Screen Size button selection
+document.querySelectorAll('#screenSizeOptions .option-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#screenSizeOptions .option-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+  });
+});
+
+// Handle Processor button selection
+document.querySelectorAll('#processorOptions .option-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#processorOptions .option-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+  });
+});
+
+  </script>
+
+  <footer>
+  <img src="images/Samsung_Orig_Wordmark_BLACK_RGB.png" alt="Samsung Logo" class="footer-logo" />
+  <p>&copy; 2025 Samsung Clone</p>
+  <p>All Rights Reserved</p>
+</footer>
+
+
+</body>
+</html>

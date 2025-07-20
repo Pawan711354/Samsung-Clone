@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobile Phones & Tablets - Samsung Clone</title>
+  <style>
+  .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /*Section 7 */
+  .buy-btn {
+    display: none;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #90a3b7;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .item-card:hover .buy-btn {
+    display: inline-block;
+  }
+
+  .buy-btn:hover {
+    background-color: #5c5e61;
+  }
+  /* ==================== Information Section ==================== */
+.information-section {
+    background: #f9f9f9;
+    padding: 3em 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 2em;
+    border-top: 1px solid #ddd;
+}
+
+.information-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8em;
+    color: #222;
+    font-weight: bold;
+}
+
+.information-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.information-section ul li {
+    margin: 0.4em 0;
+}
+
+.information-section ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.information-section ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 992px) {
+    .information-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+    }
+}
+@media (max-width: 576px) {
+    .information-section {
+        grid-template-columns: 1fr; /* Stack into 1 column on phones */
+    }
+}
+.information-section ul li {
+    margin: 0.8em 0; /* Increase vertical spacing between items */
+}
+
+#searchContainer {
+      position: relative;
+      width: 250px;
+    }
+
+    #suggestions {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: none;
+      z-index: 1000;
+    }
+
+    #suggestions div {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+
+    #suggestions div:hover {
+      background-color: #f0f0f0;
+    }
+
+    #suggestions img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #000000;">
+
+  <!-- Header -->
+  <header style="background: transparent; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <img src="images/Samsung_Orig_Wordmark_WHITE_RGB.png" alt="Samsung Logo" style="width: 180px;" />
+  <div style="display: flex; align-items: center; gap: 1.5rem;">
+    <a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: bold;">Home</a>
+
+    <!-- Search -->
+    <div id="searchContainer" style="position: relative;">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        oninput="handleLiveSearch()"
+        style="padding: 0.5rem 1rem; border: 1px solid #ccc; border-radius: 20px; font-size: 1rem; width: 250px;"
+      />
+      <div id="suggestions"
+           style="position: absolute; background: #fff; width: 100%; top: 100%; left: 0; border: 1px solid #ccc; border-radius: 10px; display: none; z-index: 999;">
+      </div>
+    </div>
+  </div>
+  </header>
+
+</section>
+<!-- Section 1: Hero Banner with Background Image -->
+<section
+  style="
+    background-image: url('images/Section 01.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  "
+>
+ <div style="
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  ">
+    <h1 style="font-size: 5rem; margin: 0;">Galaxy S25 Ultra</h1>
+    <p style="font-size: 3rem; margin: 0.5rem 0 2rem;">
+      Galaxy AI
+    </p>
+    <a href="Galaxy-S25-Ultra.html" style="
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: rgb(25, 24, 24);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+    ">Buy Now</a>
+  </div>
+</section>
+
+   <!-- Section 2: Explore Galaxy -->
+<section style="margin: 4rem 0;  padding: 2rem; background: #000000; border-radius: 12px;">
+    
+  <!-- Top Center Description -->
+  <!-- Top Center Description -->
+  <div style="text-align: center; margin-bottom: 2rem; color: rgba(83, 142, 225, 0.938);">
+    <h2 style="font-size: 4rem; margin-bottom: 0.5rem;">Simply</h2>
+    <p style="font-size: 2rem; max-width: 700px; margin: 0 auto;">
+     Powerful.
+    </p>
+  </div>
+
+  <!-- Center Video (not background) -->
+  <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+    <video autoplay muted loop playsinline style="width: 90%;height: 80vh; max-width: 800px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      <source src="videos/Video 2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Scrollable Feature Cards -->
+  <div style="
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+  ">
+    <!-- Card 1 -->
+    <div style="min-width: 260px; background: rgb(16, 15, 15); border-radius: 16px; padding: 2.5rem; font-size: 1.3rem; color: rgb(139, 137, 137);">
+      <h4>"Galaxy S25 Ultra is an exercise in refinement, showcasing the best-of-best Android has to offer in 2025"</h4>
+      <p>T3</p>
+    </div>
+    <!-- Card 2 -->
+    <div style="min-width: 260px; background: rgb(16, 15, 15); border-radius: 16px; padding: 2.5rem; font-size: 1.3rem; color: rgb(139, 137, 137);">
+      <h4>"Personalization is one of the best things of new AI features on Galaxy S25 Series"</h4>
+      <p>ZDNET</p>
+    </div>
+    <!-- Card 3 -->
+    <div style="min-width: 260px; background: rgb(16, 15, 15); border-radius: 16px; padding: 2.5rem; font-size: 1.3rem; color: rgb(139, 137, 137);">
+      <h4>"If you have to have the best camera, you'll want to choose Galaxy S25 Ultra"</h4>
+      <p>ZDNET</p>
+    </div>
+    <!-- Card 4 -->
+    <div style="min-width: 260px; background: rgb(16, 15, 15); border-radius: 16px; padding: 2.5rem; font-size: 1.3rem; color: rgb(139, 137, 137);">
+      <h4>
+"Galaxy S Series continues to be some of the world's best designed technology"</h4>
+      <p>The Independent</p>
+    </div>
+    <!-- Card 5 -->
+    <div style="min-width: 260px; background: rgb(16, 15, 15); border-radius: 16px; padding: 2.5rem; font-size: 1.3rem; color: rgb(139, 137, 137);">
+      <h4>"Galaxy S25 Ultra's rounded design expresses a unified identity for the Galaxy S series."</h4>
+      <p>T4</p>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Section 3: Choose Your Color -->
+<section style="margin: 4rem 0; padding: 2rem; background: #000000; border-radius: 12px; color: rgb(255, 255, 255)">
+  <!-- Top Center Description -->
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h2 style="font-size: 3rem; margin-bottom: 0.5rem;">Choose Your Favorite Color</h2>
+    <p style="font-size: 1.5rem;">Pick a Style that Suits Your Personality.</p>
+  </div>
+
+  <!-- Phone Image Display -->
+  <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 1.5rem;">
+    <img id="phoneImage" src="images/phone-Black.png" alt="Phone" style="max-width: 600px; height: 60vh; border-radius: 12px; transition: 0.3s ease;" />
+  </div>
+
+  <!-- Color Picker Dots -->
+  <div style="display: flex; justify-content: center; gap: 1rem;">
+    <!-- Each dot uses a data-color attribute -->
+    <div onclick="changeColor('Black')" style="width: 30px; height: 30px; border-radius: 50%; background: #292a2a;; cursor: pointer;"></div>
+    <div onclick="changeColor('Silver')" style="width: 30px; height: 30px; border-radius: 50%; background: #bfbebc; cursor: pointer;"></div>
+    <div onclick="changeColor('Titanium Blue')" style="width: 30px; height: 30px; border-radius: 50%; background: #a4a4c0; cursor: pointer;"></div>
+    <div onclick="changeColor('Gray')" style="width: 30px; height: 30px; border-radius: 50%; background: rgb(163, 161, 155); cursor: pointer;"></div>
+    <div onclick="changeColor('Jade Green')" style="width: 30px; height: 30px; border-radius: 50%; background: #889c88; cursor: pointer;"></div>
+    <div onclick="changeColor('Pink Gold')" style="width: 30px; height: 30px; border-radius: 50%; background: #c7b5be; cursor: pointer;"></div>
+  </div>
+</section>
+
+   <!-- Section 4 -->
+<section style="padding: 4rem 2rem; background-color: #000000;">
+
+  <!-- Top Centered Image -->
+  <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+    <img src="images/Galaxy AI.jpg" alt="Section 4 Banner" style="max-width: 400px; width: 100%;" />
+  </div>
+
+  <!-- Center Video -->
+  <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+    <div style="width: 100%; max-width: 800px; height: 60vh;">
+      <video autoplay muted loop playsinline style="width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); display: block; margin: 0 auto;">
+        <source src="videos/video 3.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <!-- Bottom Description -->
+  <div class="fade-in-on-scroll">
+  <p style="text-align: center; font-size: 1.3rem; max-width: 600px; margin: 0 auto; color: #5f5a5a;">
+  Ring in the next era of mobile AI with an AI companion who's one step ahead of your every need. Just let natural conversation guide the way to checking off everyday tasks with ease.
+  </p>
+</div>
+
+
+
+</section>
+
+    <!-- Section 5 -->
+<section id="section-5" style="padding: 4rem 2rem; background-color: #000000; text-align: center;">
+  
+  <!-- Top Description -->
+  <h2 style="font-size: 2rem; margin-bottom: 2rem; color: #ffffff;">
+    Press, talk, done1
+  </h2>
+
+  <!-- Centered Video -->
+  <div style="max-width: 960px; margin: 0 auto;">
+    <video autoplay muted loop playsinline style="width: 100%; height: auto; border-radius: 12px;">
+      <source src="videos/Video 4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Bottom Description -->
+  <p style="font-size: 1.3rem; margin-top: 2rem; color: #5f5a5a; max-width: 700px; margin-left: auto; margin-right: auto;">
+    Seamlessly complete your tasks without having to switch between various apps. Simply press and hold the side button to access Google Gemini for help.1.
+  </p>
+
+</section>
+
+    <!-- Section 6 -->
+<section id="section-6" style="padding: 4rem 2rem; background-color: #000000;">
+  
+  <!-- Row 1: Image Left / Text Right -->
+  <div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 4rem;">
+    <div style="flex: 1; min-width: 280px;">
+      <img src="images/Section 06 01.jpg" alt="Feature 1" style="width: 80%; border-radius: 12px;height: 100vh;" />
+    </div>
+    <div style="flex: 1; padding: 1.5rem; min-width: 280px; color: #ffffff;">
+      <h3 style="font-size: 3rem;">Circle it, find it. Hear it, find it</h3>
+      <p style="font-size: 1.3rem; color: #ffffff;">
+        Circle to Search with Google allows you to search anything on your screen and get information faster with AI Overviews. Just circle an object—including images, videos, or text—with your finger or S Pen and you'll get results immediately. You can even search for a song that you hear in the moment without switching apps.12
+      </p>
+    </div>
+  </div>
+
+  <!-- Row 2: Text Left / Video Right -->
+    <div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 4rem; flex-direction: row-reverse;">
+    <div style="flex: 1; min-width: 280px;">
+      <!-- Replace "video02.mp4" with your actual video path -->
+      <video autoplay muted loop playsinline style="width: 100%; border-radius: 12px; height: 100vh;">
+        <source src="videos/Video 5.webm" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div style="flex: 1; padding: 1rem; min-width: 280px; color: #ffffff;">
+      <h3 style="font-size: 3rem;">A sound studio at your fingertips</h3>
+      <p style="font-size: 1.3rem; color: #ffffff;">
+        Filter out unwanted background noise from your videos and make them share-worthy with Audio Eraser. Galaxy AI fine-tunes your audio by adjusting different types of sound including voices, music, wind and more.13
+      </p>
+    </div>
+  </div>
+
+  <!-- Row 3: Image Left / Text Right -->
+  <div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 4rem;">
+    <div style="flex: 1; min-width: 280px;">
+      <img src="images/Section 06 02.jpg" alt="Feature 3" style="width: 80%; border-radius: 12px; height: 100vh;" />
+    </div>
+    <div style="flex: 1; padding: 1rem; min-width: 280px; color: #ffffff;">
+      <h3 style="font-size: 3rem;">Filters just for you</h3>
+      <p style="font-size: 1.3rem; color: #ffffff;">
+        Bring your pics to life with your own personalized filters. Galaxy AI will analyze your favorite photo and create a filter that captures the scene. Use it instantly or customize further to suit your mood with tweaks to the saturation, brightness and more.
+      </p>
+    </div>
+  </div>
+
+  <!-- Row 4: Text Left / Image Right -->
+  <div style="display: flex; flex-wrap: wrap; align-items: center;">
+    <div style="flex: 1; min-width: 280px;">
+      <img src="images/Section 06 03.jpg" alt="Feature 4" style="width: 80%; border-radius: 12px;  height: 100vh;" />
+    </div>
+    <div style="flex: 1; padding: 1rem; min-width: 280px; color: #ffffff;">
+      <h3 style="font-size: 3rem;">The Future of Health, Now Made Personal</h3>
+      <p style="font-size: 1.3rem; color: #ffffff;">
+       Keep up with your health goals by tracking your Energy Score. Sync with Galaxy Watch or Ring and receive personalized insights and coaching such as an analysis of your sleep, activity and heart rate.14,15
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- Section 07 -->
+<section id="section-7" style="padding: 4rem 2rem; background-color: #000000;">
+  <!-- Top Middle Description -->
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #ffffff;">Latest Galaxy Phones</h2>
+
+  <!-- Scrollable Items Container -->
+  <div style="display: flex; overflow-x: auto; gap: 4rem; scroll-snap-type: x mandatory; padding-bottom: 1rem;">
+    
+    <!-- Item 1 -->
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/GNB_P3_176x176.avif" alt="Galaxy S25 Ultra" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy S25 Ultra</h4>
+      <a href="Galaxy-S25-Ultra.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy S25 Plus.avif" alt="Galaxy S25 +" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy S25 +</h4>
+      <a href="Galaxy-S25.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy S25 Edge.webp" alt="Galaxy S25 Edge" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy S25 Edge</h4>
+      <a href="Galaxy-S25-Edge.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy S24 Ultra.webp" alt="Galaxy S24 Ultra" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy S24 Ultra</h4>
+      <a href="Galaxy-S24-Ultra.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Z Fold.avif" alt="Galaxy Z Fold 6" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy Z Fold 6</h4>
+      <a href="Galaxy-Z-Fold6.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Z Flip6.avif" alt="Galaxy Z Flip 6" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy Z Flip 6</h4>
+      <a href="Galaxy-Z-Flip6.html" class="buy-btn">Buy Now</a>
+    </div>
+  </div>
+
+<!-- See More Button -->
+<div style="text-align: center; margin-top: 40px;">
+  <a href="shop-now.html" style="
+    background-color: #787575;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  " onmouseover="this.style.backgroundColor='#005bb5'" onmouseout="this.style.backgroundColor='#787575'">
+    See More
+  </a>
+</div>
+
+
+</section>
+
+<!-- Section 08 -->
+<section id="section-8" style="
+  background-image: url('images/Galaxy\ S10\ Section\ 08.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+">
+  <!-- Optional: add content inside here if needed later -->
+</section>
+
+<!-- Section 09 -->
+<section id="section-9" style="padding: 60px 20px; text-align: center; background-color: #000000;">
+  <!-- Top Image -->
+  <img src="images/Galaxy AI.jpg" alt="Top Image" style="max-width: 300px; margin: 0 auto 20px;" />
+
+  <!-- Description -->
+  <p style="max-width: 600px; margin: 0 auto 40px; font-size: 1.3rem; color: #ffffff;">
+    For the first time ever Tab S10 Series is pre-equipped with Galaxy AI Putting a massive, AI-powered studio canvas in your hands.
+  </p>
+
+  <!-- Carousel -->
+  <div class="carousel-container" style="position: relative; width: 100%; max-width: 400px; margin: auto;">
+    <div class="carousel-images" style="position: relative; height: 500px; overflow: hidden;">
+      <img src="images/Galaxy S10 Section 9 01.jpeg" class="carousel-img active" style="width: 100%; height: 60vh; object-fit: contain; display: none;" />
+      <img src="images/Galaxy S10 Section 09 02.jpg" class="carousel-img" style="width: 100%; height: 100%; object-fit: contain; display: none;" />
+      <img src="images/Galaxy S10 Section 09 03.jpg" class="carousel-img" style="width: 100%; height: 100%; object-fit: contain; display: none;" />
+      <img src="images/Galaxy S10 Section 09 04.jpg" class="carousel-img" style="width: 100%; height: 100%; object-fit: contain; display: none;" />
+    </div>
+
+    <!-- Dots -->
+    <div class="carousel-dots" style="display: flex; justify-content: center; margin-top: 15px; gap: 10px;">
+      <span class="dot active-dot" onclick="showSlide(0)" style="width: 12px; height: 12px; border-radius: 50%; background: #ffffff; cursor: pointer;"></span>
+      <span class="dot" onclick="showSlide(1)" style="width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer;"></span>
+      <span class="dot" onclick="showSlide(2)" style="width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer;"></span>
+      <span class="dot" onclick="showSlide(3)" style="width: 12px; height: 12px; border-radius: 50%; background: #ccc; cursor: pointer;"></span>
+    </div>
+  </div>
+</section>
+
+<!-- Section 10 -->
+<section id="section-10" style="padding: 60px 20px; background-color: #000000; text-align: center;">
+
+  <!-- Video -->
+  <video autoplay muted loop controls style="width: 90%; max-width: 800px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+    <source src="videos/Video 6.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Description -->
+  <p style="color: #ffffff;margin-top: 30px; font-size: 2.7rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+    Iconic design. Iconic feel
+  </p>
+  <p style="font-size: 1.4rem; color: #ffffff;">
+      There's a touch of innovation in every detail — with all new design accents on the S pen, charging area and camera deco. And each one feels amazing to the touch.
+      </p>
+
+</section>
+<!-- Section 11 -->
+<section id="section-11" style="padding: 60px 20px; background-color: #000000; text-align: center;">
+
+  <!-- Top Description -->
+  <h2 style="font-size: 2rem; margin-bottom: 20px; color: #ffffff;">Choose Your Style</h2>
+
+  <!-- Product Image -->
+  <img id="productImage" src="images/product-Platinum Silver.jpg" alt="Product" 
+       style="height: 500px;width:400px; max-width: 90%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);" />
+
+  <!-- Color Buttons -->
+  <div style="margin-top: 20px;">
+    <button class="color-btn" data-color="Platinum Silver"
+            style="background-color: #d7cece; width: 30px; height: 30px; border-radius: 50%; border: 2px solid #333; cursor: pointer; margin-right: 10px;">
+    </button>
+    <button class="color-btn" data-color="Moon Gray"
+            style="background-color: #333333; width: 30px; height: 30px; border-radius: 50%; border: 2px solid #ccc; cursor: pointer;">
+    </button>
+  </div>
+</section>
+
+<!-- Section 12 -->
+<section id="section-12" style="padding: 60px 20px; background-color: #ffffff; color: #000000; text-align: center;">
+
+  <!-- Top Middle Description -->
+  <h2 style="font-size: 3.5rem; margin-bottom: 30px;">Your personal note-taking assistant</h2>
+<p style="font-size: 1.4rem; color: #000000;">
+      Get meeting notes while staying completely engaged in the meeting — just record the meeting then transcribe audio to text. Galaxy AI can then format and summarize those notes, making note-taking effortlessly easy.
+      </p>
+  <!-- Center Video -->
+  <div style="max-width: 800px;  margin: 0 auto;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; border-radius: 12px; ">
+      <source src="videos/Video 7.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<!-- Section 13 -->
+<section id="section-13" style="padding: 60px 20px; background-color: #ffffff;">
+
+  <!-- Row 1: Image Left, Text Right -->
+  <div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 60px;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="images/Section 13 01.jpg" alt="Left Image" style="width: 90%; max-width: 500px; border-radius: 10px;" />
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+      <h2 style="font-size: 3rem; margin-bottom: 20px;">Edit in Split View</h2>
+      <p style="font-size: 1.3rem; line-height: 1.6;">
+        Formatting your notes gets even easier in Split View — helping you format while keeping track of the original.
+      </p>
+    </div>
+  </div>
+
+  <!-- Row 2: Text Left, Image Right -->
+  <div style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row-reverse;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="images/Section 13 02.jpg" alt="Right Image" style="width: 90%; max-width: 500px; border-radius: 10px;" />
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+      <h2 style="font-size: 3rem; margin-bottom: 20px;">Rocket science just got easier</h2>
+      <p style="font-size: 1.3rem; line-height: 1.6;">
+        Solve Math makes calculation a cinch — automatically calculating complex formulas. And with Handwriting Help, it can even decipher your handwriting.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 14 -->
+<section id="section-12" style="padding: 60px 20px; background-color: #ffffff; color: #000000; text-align: center;">
+
+  <!-- Top Middle Description -->
+  <h2 style="font-size: 3.5rem; margin-bottom: 30px;">Dream it. Draw it. Done</h2>
+<p style="font-size: 1.4rem; color: #000000;">
+  Use Sketch to Image to turn your rough sketches and doodles into artwork with the help of AI and S Pen wizardry. Drawing is more powerful than ever.
+      </p>
+  <!-- Center Video -->
+  <div style="max-width: 800px;  margin: 0 auto;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; border-radius: 12px; ">
+      <source src="videos/Video 08.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<!-- Section 15 -->
+<section id="section-15" style="padding: 60px 20px; background-color: #000000;">
+  
+  <div style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row-reverse;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="images/Section 14 01.jpg" alt="Right Image" style="width: 90%; max-width: 500px; border-radius: 10px;" />
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+      <h2 style="font-size: 3rem; margin-bottom: 20px;color: #ffffff;">Keeps cool when gaming heats up</h2>
+      <p style="font-size: 1.3rem; line-height: 1.4;color: #ffffff;">
+        Rev up the excitement with an ultra fast, powerful processor. When the action really heats up, it keeps cool with the larger Vapor Chamber cooling system  built to more efficiently cool the longer you game, or binge videos.
+      </p>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 60px;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="images/Section 15 02.jpg" alt="Left Image" style="width: 90%; max-width: 500px; border-radius: 10px;" />
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+      <h2 style="font-size: 3rem; margin-bottom: 20px; color: #ffffff;">Busts dust. Withstands water</h2>
+      <p style="font-size: 1.3rem; line-height: 1.6; color: #ffffff;">
+       A little water won't hurt you. In fact, you're in the clear in up to 1.5 meters of fresh water for up to 30 mins.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 16 -->
+<section id="section-7" style="padding: 4rem 2rem; background-color: #000000;">
+  <!-- Top Middle Description -->
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #ffffff;">Latest Galaxy Phones</h2>
+
+  <!-- Scrollable Items Container -->
+  <div style="display: flex; overflow-x: auto; gap:6.5rem; scroll-snap-type: x mandatory; padding-bottom: 1rem;">
+    
+    <!-- Item 1 -->
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Tab S10 Ultra.webp" alt="Galaxy Tab S10 Ultra" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy Tab S10 Ultra</h4>
+      <a href="Galaxy-Tab-S10-Ultra.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Tab S10 FE.avif" alt="Galaxy Tab S10 FE +" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy Tab S10 FE +</h4>
+      <a href="Tab-S10-FE.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Tab S9 FE.webp" alt="Galaxy Tab S9 FE" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy Tab S9 FE</h4>
+      <a href="Galaxy-Tab-S9-FE.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(40, 39, 39); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Tab.avif" alt="Galaxy Tab A9" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #ffffff;">Galaxy Tab A9</h4>
+      <a href="Galaxy-Tab-A9.html" class="buy-btn">Buy Now</a>
+    </div>
+     </div>
+
+     <!-- See More Button -->
+<div style="text-align: center; margin-top: 40px;">
+  <a href="shop-now.html" style="
+    background-color: #787575;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  " onmouseover="this.style.backgroundColor='#005bb5'" onmouseout="this.style.backgroundColor='#787575'">
+    See More
+  </a>
+</div>
+</section>
+
+ <!-- Information Section -->
+    <section class="information-section">
+        <div class="info-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Leadership & Mission</a></li>
+                <li><a href="#">Our Business</a></li>
+                <li><a href="#">Brand Identity</a></li>
+                <li><a href="#">Careers </a></li>
+                <li><a href="#">Investor Relations </a></li>
+                <li><a href="#">Newsroom </a></li>
+                <li><a href="#">Ethics </a></li>
+                <li><a href="#">Samsung Designs </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Chat With Us</a></li>
+                <li><a href="#">Order Help</a></li>
+                <li><a href="#">Product Help</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Register Your Account </a></li>
+                <li><a href="#">Request a Repair </a></li>
+                <li><a href="#">Contact Us </a></li>
+                <li><a href="#">Samsung Community </a></li>
+                <li><a href="#">Feedbacks </a></li>
+                <li><a href="#">Manual & Software </a></li>
+                <li><a href="#">Slide-In Electronic Range Recall </a></li>
+                <li><a href="#">Returns </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Offers</h4>
+            <ul>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Samsung Rewards</a></li>
+                <li><a href="#">Education Offer Program</a></li>
+                <li><a href="#">Government Offer Program</a></li>
+                <li><a href="#">Military Offer Program </a></li>
+                <li><a href="#">Employee Offer Program </a></li>
+                <li><a href="#">First Responder Offer Program </a></li>
+                <li><a href="#">Business Offer Program </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Sustainability</h4>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Environment</a></li>
+                <li><a href="#">Digital Responsibility</a></li>
+                <li><a href="#">Security And Privacy</a></li>
+                <li><a href="#">Accessibility </a></li>
+                <li><a href="#">Labour & Human Rights </a></li>
+                <li><a href="#">Conflict Minerals</a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Locations</h4>
+            <ul>
+                <li><a href="#">Asia Pacific</a></li>
+                <li><a href="#">Europe</a></li>
+                <li><a href="#">Middle East & Africa</a></li>
+                <li><a href="#">Latin America </a></li>
+                <li><a href="#">North America </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Samsung.com </a></li>
+                <li><a href="#">Samsung Experience Store </a></li>
+                <li><a href="#">Samsung Shop </a></li>
+                <li><a href="#">Samsung Setup </a></li>
+                <li><a href="#">Samsung TV Plus </a></li>
+                <li><a href="#">Samsung Care+</a></li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+  <!-- Footer -->
+  <footer style="background: transparent; color: #000000; text-align: center; padding: 2rem; margin-top: 4rem;color: #ffffff">
+    <img src="images/Samsung_Orig_Wordmark_WHITE_RGB.png" alt="Samsung Logo" style="width: 120px; margin-bottom: 10px;" />
+    <p>&copy; 2025 Samsung Clone</p>
+    <p>All Rights Reserved</p>
+  </footer>
+
+<script>
+  function changeColor(color) {
+    const phoneImage = document.getElementById('phoneImage');
+    phoneImage.src = `images/phone-${color}.png`;
+  }
+
+  function handleScrollAnimation() {
+    const elements = document.querySelectorAll('.fade-in-on-scroll');
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const inView = rect.top <= window.innerHeight - 100 && rect.bottom >= 100;
+
+      if (inView) {
+        el.classList.add('visible');
+      } else {
+        el.classList.remove('visible'); // <-- remove when out of view
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScrollAnimation);
+  window.addEventListener('load', handleScrollAnimation);
+
+
+  let currentIndex = 0;
+  const images = document.querySelectorAll(".carousel-img");
+  const dots = document.querySelectorAll(".dot");
+
+  function showSlide(index) {
+    images.forEach((img, i) => {
+      img.style.display = i === index ? "block" : "none";
+    });
+    dots.forEach((dot, i) => {
+      dot.style.background = i === index ? "#000" : "#ccc";
+    });
+    currentIndex = index;
+  }
+
+  // Initialize first image
+  showSlide(0);
+
+
+ document.querySelectorAll('.color-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const selectedColor = this.getAttribute('data-color');
+      const productImage = document.getElementById('productImage');
+
+      if (selectedColor === 'black') {
+        productImage.src = 'images/product-black.jpg';
+      } else if (selectedColor === 'white') {
+        productImage.src = 'images/product-white.jpg';
+      }
+    });
+  });
+
+let products = [];
+
+  // Fetch products from JSON file
+  fetch('products.json')
+    .then(res => res.json())
+    .then(data => {
+      products = data;
+    })
+    .catch(error => {
+      console.error("Failed to load product data:", error);
+    });
+
+  function handleLiveSearch() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const suggestions = document.getElementById("suggestions");
+    suggestions.innerHTML = "";
+
+    if (!input) {
+      suggestions.style.display = "none";
+      return;
+    }
+
+    const matches = products.filter(p =>
+      p.name.toLowerCase().includes(input)
+    );
+
+    if (matches.length > 0) {
+      matches.forEach(product => {
+        const div = document.createElement("div");
+        div.style.display = "flex";
+        div.style.alignItems = "center";
+        div.style.padding = "10px";
+        div.style.cursor = "pointer";
+        div.innerHTML = `
+          <img src="${product.image}" style="width: 40px; height: 40px; border-radius: 5px; margin-right: 10px;">
+          <span>${product.name}</span>
+        `;
+        div.onclick = () => {
+          window.location.href = product.url;
+        };
+        suggestions.appendChild(div);
+      });
+      suggestions.style.display = "block";
+    } else {
+      suggestions.innerHTML = "<div style='padding: 10px;'>No results found</div>";
+      suggestions.style.display = "block";
+    }
+  }
+</script>
+</body>
+</html>

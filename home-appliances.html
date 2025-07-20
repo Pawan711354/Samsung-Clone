@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laptops - Samsung Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+    }
+    header, footer {
+      background: hsl(30, 12%, 94%);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    .section h2 {
+      margin-bottom: 1rem;
+    }
+    footer {
+      flex-direction: column;
+      text-align: center;
+      color: rgb(0, 0, 0);
+    }
+    footer img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+    .image-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.image-dot:hover {
+  transform: scale(1.2);
+}
+
+
+/*Section 7 */
+  .buy-btn {
+    display: none;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #90a3b7;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .item-card:hover .buy-btn {
+    display: inline-block;
+  }
+
+  .buy-btn:hover {
+    background-color: #5c5e61;
+  }
+
+  /* ==================== Information Section ==================== */
+.information-section {
+    background: #f9f9f9;
+    padding: 3em 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 2em;
+    border-top: 1px solid #ddd;
+}
+
+.information-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8em;
+    color: #222;
+    font-weight: bold;
+}
+
+.information-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.information-section ul li {
+    margin: 0.4em 0;
+}
+
+.information-section ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.information-section ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 992px) {
+    .information-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+    }
+}
+@media (max-width: 576px) {
+    .information-section {
+        grid-template-columns: 1fr; /* Stack into 1 column on phones */
+    }
+}
+.information-section ul li {
+    margin: 0.8em 0; /* Increase vertical spacing between items */
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  <img src="images/Samsung_Orig_Wordmark_BLUE_RGB.png" alt="Samsung Logo" style="width: 180px;" />
+  <div style="display: flex; align-items: center; gap: 1.5rem;">
+    <a href="index.html">Home</a>
+    <!-- Search -->
+    <div id="searchContainer" style="position: relative;">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        oninput="handleLiveSearch()"
+        style="padding: 0.5rem 1rem; border: 1px solid #ccc; border-radius: 20px; font-size: 1rem; width: 250px;"
+      />
+      <div id="suggestions"
+           style="position: absolute; background: #fff; width: 100%; top: 100%; left: 0; border: 1px solid #ccc; border-radius: 10px; display: none; z-index: 999;">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section style="
+  width: 100%;
+  height: 800px;
+  background-image: url('images/No\ load.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+">
+  <div style="
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    max-width: 400px;
+    text-align: right;
+    border-radius: 10px;
+  ">
+    <h2 style="font-size: 52px; margin-bottom: 10px;">No load transfer</h2>
+    <p style="font-size: 28px; line-height: 1.5;">All-in-One Combo</p>
+  </div>
+</section>
+
+<div style="height: 40px; background-color: #000000;"></div>
+  
+<section style="width: 100%;">
+
+  <!-- Subsection 1 -->
+  <div style="display: flex; align-items: center; padding: 50px 0;">
+    <img src="images/Section 02.jpg" style="width: 100%; height: auto;">
+    <div style="width: 100%; padding: 20px; text-align: left; color: white">
+      <h2>One-stop Laundry</h2>
+      <p>The All-in-One design seamlessly integrates a washer and dryer in one appliance, so you can dry and wash clothes without having to move them. It works as two appliances, while saving valuable space.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 2 -->
+  <div style="display: flex; align-items: center; padding: 50px 0; flex-direction: row-reverse;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: right;">
+      <h2>Topic 2</h2>
+      <p>Description for topic 2 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 3 -->
+  <div style="display: flex; align-items: center; padding: 50px 0;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: left;">
+      <h2>Topic 3</h2>
+      <p>Description for topic 3 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 4 -->
+  <div style="display: flex; align-items: center; padding: 50px 0; flex-direction: row-reverse;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: right;">
+      <h2>Topic 4</h2>
+      <p>Description for topic 4 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 5 -->
+  <div style="display: flex; align-items: center; padding: 50px 0;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: left;">
+      <h2>Topic 5</h2>
+      <p>Description for topic 5 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 6 -->
+  <div style="display: flex; align-items: center; padding: 50px 0; flex-direction: row-reverse;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: right;">
+      <h2>Topic 6</h2>
+      <p>Description for topic 6 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 7 -->
+  <div style="display: flex; align-items: center; padding: 50px 0;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: left;">
+      <h2>Topic 7</h2>
+      <p>Description for topic 7 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 8 -->
+  <div style="display: flex; align-items: center; padding: 50px 0; flex-direction: row-reverse;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: right;">
+      <h2>Topic 8</h2>
+      <p>Description for topic 8 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 9 -->
+  <div style="display: flex; align-items: center; padding: 50px 0;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: left;">
+      <h2>Topic 9</h2>
+      <p>Description for topic 9 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 10 -->
+  <div style="display: flex; align-items: center; padding: 50px 0; flex-direction: row-reverse;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: right;">
+      <h2>Topic 10</h2>
+      <p>Description for topic 10 goes here.</p>
+    </div>
+  </div>
+
+  <!-- Subsection 11 -->
+  <div style="display: flex; align-items: center; padding: 50px 0;">
+    <img src="images/No\ load.jpg" style="width: 50%; height: auto;">
+    <div style="width: 50%; padding: 20px; text-align: left;">
+      <h2>Topic 11</h2>
+      <p>Description for topic 11 goes here.</p>
+    </div>
+  </div>
+
+</section>
+
+
+<div style="height: 40px; background-color: #000000;"></div>
+ 
+<!-- Section 3 -->
+<section style="padding: 4rem 2rem; text-align: center; background: #000000;">
+  <!-- Top middle description -->
+  <h2 style="color: white; font-size: 2rem; margin-bottom: 2rem;">
+    360˚ of creative freedom
+  </h2>
+  <p style="margin-top: 1rem; font-size: 1.2rem; color: #ffffff;">
+   Galaxy Book5 Pro 360 puts a spin on daily productivity with its 2-in-1 convertible design. Weighing in at 1.69 kg with a sleek finish in Gray or Silver, it's your versatile companion for hustles on the move.
+  </p>
+
+  <!-- Center image -->
+  <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+    <img src="images/Book Section 03 01.avif" alt="Center Image" style="width: 100%; border-radius: 10px;" />
+  </div>
+</section>
+<div style="height: 40px; background-color: #000000;"></div>
+  <!-- Section 4 -->
+  <section style="padding: 4rem 2rem; text-align: center; background: #000000;">
+  <!-- Top middle description -->
+  <h2 style="color: white; font-size: 2rem; margin-bottom: 2rem;">
+    360˚ of creative freedom
+  </h2>
+  <p style="margin-top: 1rem; font-size: 1.2rem; color: #ffffff;">
+   Galaxy Book5 Pro 360 puts a spin on daily productivity with its 2-in-1 convertible design. Weighing in at 1.69 kg with a sleek finish in Gray or Silver, it's your versatile companion for hustles on the move.
+  </p>
+
+  <div style="max-width: 1200px;height: 70vh;  margin: 0 auto;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; border-radius: 12px; ">
+      <source src="videos/Book 01.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <h2 style="color: white; font-size: 2rem; margin-bottom: 2rem;">
+    Revisit, rediscover, re-engage with Recall
+  </h2>
+  <p style="margin-top: 1rem; font-size: 1.2rem; color: #ffffff;">
+   Explore your PC's history and quickly find what you need with Recall — like those inspiring designs you saw on the web a while back. Scan through snapshots in the timeline to get relevant results and related docs.
+  </p>
+
+  <div style="max-width: 1200px;height: 70vh;  margin: 0 auto;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; border-radius: 12px; ">
+      <source src="videos/Book 02.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+  <!-- Section 5 -->
+
+<section style="padding: 4rem 2rem; text-align: center; background: #ffffff;">
+  <!-- Top middle description -->
+  <h2 style="color: rgb(0, 0, 0); font-size: 2rem; margin-bottom: 2rem;">
+    Big woofers. Deeper sound
+  </h2>
+  <p style="margin-top: 0rem; font-size: 1.2rem; color: #000000;">
+   Galaxy Book5 Pro 360 now features 3.8 cm woofers, more than 2x larger than before — so you feel the bass in every beat with rich low-frequency sounds. Plus, the quad speakers are tuned with Dolby Atmos for immersive surround sound.
+  </p>
+
+  <!-- Center image -->
+  <div style="display: flex; justify-content: center; margin-bottom: 2rem;color: #000000;">
+    <img src="images/Book Section 05 01.jpg" alt="Center Image" style="width: 100%; border-radius: 10px;" />
+  </div>
+   <p style="margin-top: 1rem; font-size: 0.8rem; color: #000000;">
+   *The quad-speaker system on Galaxy Book5 Pro 360 features two woofers (5W max each) and two tweeters (3.3W each).**Galaxy Book5 Pro 360 features 3.8 cm big woofers compared to the 1.8 cm woofers on Galaxy Book4 Pro 360.
+  </p>
+</section>
+
+<div style="height: 40px; background-color: #ffffff;">
+</div>
+
+  <!-- Section 6 -->
+<section id="section-6" style="padding: 60px 20px; background-color: #ffffff; margin-top: 0px;">
+  <div style="display: flex; flex-wrap: wrap; align-items: center; flex-direction: row-reverse;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="images/Book Section 06 01.jpg" alt="Right Image" style="width: 100%; max-width: 800px; border-radius: 10px;height: 90vh;" />
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+      <h2 style="font-size: 3rem; margin-bottom: 20px;color: #000000;">Wi-Fi 7. Full speed ahead</h2>
+      <p style="font-size: 1.3rem; line-height: 1.4;color: #000000;">
+        Go online, stay online — Wi-Fi 7 is up to 4.8x faster than Wi-Fi 6, letting you connect reliably with lightning speed. Join online meetings, share updates and stay in touch easily with smooth real-time interactions and ultra-low latency.
+      </p>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 60px;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="images/Book Section 06 02.jpg" alt="Left Image" style="width: 100%; max-width: 800px; border-radius: 10px;height: 90vh;" />
+    </div>
+    <div style="flex: 1; min-width: 300px; padding: 20px;">
+      <h2 style="font-size: 3rem; margin-bottom: 20px; color: #000000;">Samsung Knox. Pro security</h2>
+      <p style="font-size: 1.3rem; line-height: 1.6; color: #000000;">
+       Safeguard your system with premium security from Samsung Knox. A dedicated security chip in the hardware is designed to shield your device in real time. Protected all around, your laptop's critical system data can stay safe from potential threats and breaches.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div style="height: 40px; background-color: #ffffff;"></div>
+
+<!-- Section 7 -->
+<section style="padding: 4rem 2rem; text-align: center; background: #ffffff;">
+  <!-- Top middle description -->
+  <h2 style="color: rgb(0, 0, 0); font-size: 2rem; margin-bottom: 2rem;">
+    In box items
+  </h2>
+
+   <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+    <img src="images/Book Section 07 01.jpg" alt="Center Image" style="width: 100%; border-radius: 10px;" />
+  </div>
+</section>
+
+<!-- Section 8 -->
+<section id="section-8" style="padding: 4rem 2rem; background-color: #ffffff;">
+  <!-- Top Middle Description -->
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 6rem; color: #000000;">Latest Galaxy Laptops</h2>
+
+  <!-- Scrollable Items Container -->
+  <div style="display: flex; overflow-x: auto; gap:6.5rem; scroll-snap-type: x mandatory; padding-bottom: 1rem;">
+    
+    <!-- Item 1 -->
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Book5 Pro.webp" alt="Galaxy Tab S10 Ultra" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #151414;">Galaxy Book 5 Pro 360</h4>
+      <a href="Galaxy-Book5-Pro-360-4062-cm-Core-Ultra-7-16-GB-Intel-Arc-Graphics.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Book5.webp" alt="Galaxy Tab S10 FE +" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #000000;">Galaxy Book 5 360</h4>
+      <a href="Galaxy-Book5-360-3962-cm-Core-Ultra-7-16-GB-Intel-Graphics.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Book4 Pro.webp" alt="Galaxy Tab S9 FE" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #151414;">Galaxy Book 4 Pro 360</h4>
+      <a href="Galaxy-Book4-Pro-360-4062-cm-Core-Ultra-7-16-GB-Intel-Arc-Graphics.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Book4.webp" alt="Galaxy Tab A9" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #151414;">Galaxy Book 4 360</h4>
+      <a href="Galaxy-Book4-3962-cm-Intel-Core-i7-16-GB-Intel-Iris-Xe-Graphics.html" class="buy-btn">Buy Now</a>
+    </div>
+
+    <div class="item-card" style="min-width: 250px; flex-shrink: 0; background:rgb(220, 218, 218); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; scroll-snap-align: start; position: relative;">
+      <img src="images/Galaxy Book3.avif" alt="Galaxy Tab A9" style="width: 100%; border-radius: 10px;" />
+      <h4 style="margin: 1rem 0; color: #151414;">Galaxy Book 3 360</h4>
+      <a href="Galaxy-Book3-360-3378-cm-i7-16-GB-Intel-Xe-Graphics.html" class="buy-btn">Buy Now</a>
+    </div>
+     </div>
+
+     <!-- See More Button -->
+<div style="text-align: center; margin-top: 40px;">
+  <a href="shop-now.html" style="
+    background-color: #cac5c5;
+    color: rgb(255, 255, 255);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  " onmouseover="this.style.backgroundColor='#cac5c5'" onmouseout="this.style.backgroundColor='#cac5c5'">
+    See More
+  </a>
+</div>
+</section>
+
+<!-- Section 9 with background video -->
+<section id="section9" style="position: relative; height: 120vh; overflow: hidden;">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline
+    style="position: absolute; top: 0; left: 0; min-width: 100%; min-height: 100%; object-fit: cover; z-index: -1;">
+    <source src="videos/TV.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Section Content -->
+  <div style="position: relative; z-index: 1; color: white; text-align: center; top: 50%; transform: translateY(-50%);">
+    <h2 style="font-size: 48px; font-weight: bold;">Samsung Vision AI is Here </h2>
+    <p style="font-size: 20px;">Samsung Vision AI transforms screens intointelligent solutions that enrich everyday life. We’re redefining what screens can do — simplifying,enhancing and empowering your daily experiences.</p>
+  </div>
+
+</section>
+
+<div style="height: 40px; background-color: #ffffff;"></div>
+
+<!-- Section 10 -->
+<section id="section10" style="padding: 60px 40px; background-color: #ffffff;">
+
+  <!-- Top Left Description -->
+  <div style="max-width: 400px; margin-bottom: 40px;">
+    <p style="font-size: 36px; color: #000000;">Foundation of Samsung Vision AI</p>
+  </div>
+
+  <!-- 3 Boxes Container -->
+  <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+    
+    <!-- Box 1 -->
+    <div style="flex: 1; min-width: 250px; background-color: rgb(201, 198, 198); padding: 20px; text-align: center; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="images/Fallout.jpg" alt="Product 1" style="width: 100%; max-width: 220px; height: auto; border-radius: 8px;">
+      <p style="margin-top: 12px; font-size: 30px; color: #000000;">One UI Tizen</p>
+      <h2 style="font-size: 20px; font-weight: bold;">Seamless and personalized user experience, latest entertainment and 7 years of OS upgrades.1</h2>
+    </div>
+
+    <!-- Box 2 -->
+    <div style="flex: 1; min-width: 250px; background-color: rgb(201, 198, 198); padding: 20px; text-align: center; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="images/Pro.jpg" alt="Product 2" style="width: 100%; max-width: 220px; height: auto; border-radius: 8px;">
+      <p style="margin-top: 12px; font-size: 30px; color: #000000;">AI Processor</p>
+      <h2 style="font-size: 20px; font-weight: bold;">Fast, intelligent AI processor enhances picture, sound and daily life with AI features.</h2>
+    </div>
+
+    <!-- Box 3 -->
+    <div style="flex: 1; min-width: 250px; background-color: rgb(201, 198, 198); padding: 20px; text-align: center; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="images/Logo.jpg" alt="Product 3" style="width: 100%; max-width: 220px; height: auto; border-radius: 8px;">
+      <p style="margin-top: 12px; font-size: 30px; color: #333;">Samsung Knox Security</p>
+      <h2 style="font-size: 20px; font-weight: bold;">Your privacy, secured. A dedicated solution that protects both privacy and security.2</h2>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Section 11 -->
+<section id="section11" style="padding: 60px 40px; background-color: #ffffff;">
+
+  <!-- Top-Left Topic and Description -->
+  <div style="max-width: 500px; margin-bottom: 40px;">
+    <h2 style="font-size: 36px; font-weight: bold;">Upscale your every moment</h2>
+    <p style="font-size: 22px; color: #555;">Front-row experiences</p>
+  </div>
+
+  <!-- Centered Video -->
+  <div style="text-align: center; margin-bottom: 30px;">
+    <video autoplay muted loop playsinline
+     width="80%" controls style="border-radius: 12px;">
+      <source src="videos/Moment.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Description Below Video -->
+  <div style="text-align: center;">
+    <h2 style="font-size: 26px; font-weight: bold;">AI Upscaling</h2>
+    <p style="font-size: 16px; color: #333; max-width: 800px; margin: 0 auto;">
+      Samsung Vision AI makes your everyday content feel cinematic. AI Picture3 enhances resolution for breathtaking
+sharpness and detail. AI Sound3 fine-tunes the audio, delivering crystal-clear dialogue and immersive sound.
+AI Optimization3 intelligently adjusts settings to match your content and environment.
+    </p>
+  </div>
+
+</section>
+
+<div style="height: 40px; background-color: #ffffff;"></div>
+
+<!-- Section 12 -->
+<section id="section12" style="padding: 60px 40px; background-color: #f9f9f9;">
+
+  <!-- Top-left Topic and Description -->
+  <div style="max-width: 500px; margin-bottom: 40px;">
+    <h2 style="font-size: 36px; font-weight: bold;">Extraordinary together</h2>
+    <p style="font-size: 18px; color: #000000;">
+      SmartThings
+    </p>
+  </div>
+
+  <!-- Side-by-Side Images -->
+  <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start;">
+
+    <!-- Small Image + Description -->
+    <div style="flex: 1; min-width: 250px;">
+      <img src="images/22.jpg" alt="Small Image" style="width: 100%; border-radius: 12px; max-width: 500px;">
+      <p style="font-size: 26px; color: #333; margin-top: 12px;">
+        Pet Care</p>
+        <p style="font-size: 18px; color: #000000;">
+      Samsung Vision AI enhances your everyday life by
+unlocking new SmartThings features. Stay connected to your loved ones with Pet Care4, ensuring peace of mind even when you’re away.
+    </p>
+    </div>
+
+    <!-- Large Image -->
+    <div style="flex: 2; min-width: 300px;">
+      <img src="images/3.jpg" alt="Large Image" style="width: 100%; border-radius: 12px;">
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Section 13 -->
+<section id="section13" style="padding: 60px 40px; background-color: #ffffff;">
+
+  <!-- Top-Left Title and Description -->
+  <div style="max-width: 500px; margin-bottom: 40px;">
+    <h2 style="font-size: 48px; font-weight: bold;">It’s your show</h2>
+    <p style="font-size: 30px; color: #555;">
+      Personalized experiences
+    </p>
+  </div>
+
+  <!-- Center Title and Description -->
+  <div style="text-align: center; margin-bottom: 30px;">
+    <h3 style="font-size: 36px; font-weight: bold;">Generative Wallpaper</h3>
+    <p style="font-size: 36px; color: #444; max-width: 700px; margin: 0 auto;">
+      What appeals to you?
+    </p>
+  </div>
+
+  <!-- Center Video -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <video autoplay muted loop playsinline
+     width="100%" controls style="border-radius: 20px;">
+      <source src="videos/Mood.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Description Below Video -->
+  <div style="text-align: center;">
+    <p style="font-size: 20px; color: #333; max-width: 800px; margin: 0 auto;">
+      There's even a new way to visually express yourself. Every day, you can enter keywords into your TV that reflect your mood. With Generative Wallpaper6, your TV will create stunning backgrounds that match those vibes.
+    </p>
+  </div>
+
+</section>
+
+<!-- Section 14 -->
+<section id="section14" style="padding: 60px 40px; background-color: #f4f4f4;">
+
+  <!-- Section Title -->
+  <div style="margin-bottom: 30px;">
+    <h2 style="font-size: 36px; font-weight: bold;">Top Picks for You</h2>
+  </div>
+
+  <!-- Horizontal Scroll Items -->
+  <div style="display: flex; overflow-x: auto; gap: 20px; padding-bottom: 20px;">
+    
+    <!-- Item 1 -->
+    <div style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="images/Crystal UHD.avif" alt="Item 1" style="width: 100%; border-radius: 8px;">
+      <p style="margin-top: 10px; font-size: 16px;">1.89 m (75) Crystal UHD DU8300 4K Smart TV (2024)</p>
+      <button onclick="location.href='189-m-75-Crystal-UHD-DU8300-4K-Smart-TV-2024.html'" style="margin-top: 10px; padding: 10px 20px; background-color: #424244; color: white; border: none; border-radius: 6px; cursor: pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- Item 2 -->
+    <div style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="images/Neo QLED 4K.avif" alt="Item 2" style="width: 100%; border-radius: 8px;">
+      <p style="margin-top: 10px; font-size: 16px;">1.89 m (75) Neo QLED 4K QN90D Smart AI TV (2024)</p>
+      <button onclick="location.href='189-m-75-Neo-QLED-4K-QN90D-Smart-AI-TV-2024.html'" style="margin-top: 10px; padding: 10px 20px; background-color: #424244; color: white; border: none; border-radius: 6px; cursor: pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- Item 3 -->
+    <div style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="images/Neo QLED.avif" alt="Item 3" style="width: 100%; border-radius: 8px;">
+      <p style="margin-top: 10px; font-size: 16px;">2.14 m (85) Neo QLED QN950F 8K Samsung Vision AI Smart TV</p>
+      <button onclick="location.href='214-m-85-Neo-QLED-QN950F-8K-Samsung-Vision-AI-Smart-TV.html'" style="margin-top: 10px; padding: 10px 20px; background-color: #424244; color: white; border: none; border-radius: 6px; cursor: pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- Item 4 -->
+    <div style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="images/Gaming Monitor With AI 3D.avif" alt="Item 4" style="width: 100%; border-radius: 8px;">
+      <p style="margin-top: 10px; font-size: 16px;">68.5 cm (27) Odyssey 3D 4K Gaming Monitor with AI 3D Video Conversion</p>
+      <button onclick="location.href='685-cm-27-Odyssey-3D-4K-Gaming-Monitor-with-AI-3D-Video-Conversion.html'" style="margin-top: 10px; padding: 10px 20px; background-color: #424244; color: white; border: none; border-radius: 6px; cursor: pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- Item 5 -->
+    <div style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="images/Smart TV Monitor.webp" alt="Item 5" style="width: 100%; border-radius: 8px;">
+      <p style="margin-top: 10px; font-size: 16px;">80 cm (32) M7 UHD 4K Smart Monitor with Smart TV experience</p>
+      <button onclick="location.href='80-cm-32-M7-UHD-4K-Smart-Monitor-with-Smart-TV-experience.html'" style="margin-top: 10px; padding: 10px 20px; background-color: #424244; color: white; border: none; border-radius: 6px; cursor: pointer;">
+        Buy Now
+      </button>
+    </div>
+
+    <!-- Item 6 -->
+    <div style="flex: 0 0 250px; background: #fff; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <img src="images/Gaming Monitor With 240Hz.avif" alt="Item 6" style="width: 100%; border-radius: 8px;">
+      <p style="margin-top: 10px; font-size: 16px;">1.24 m (49) Odyssey OLED G9 2K DQHD Gaming Monitor with 240Hz refresh rate</p>
+      <button onclick="location.href='124-m-49-Odyssey-OLED-G9-2K-DQHD-Gaming-Monitor-with-240Hz-refresh-rate.html'" style="margin-top: 10px; padding: 10px 20px; background-color: #424244; color: white; border: none; border-radius: 6px; cursor: pointer;">
+        Buy Now
+      </button>
+    </div>
+
+  </div>
+
+  <!-- See More Button -->
+  <div style="text-align: center; margin-top: 30px;">
+    <button onclick="location.href='shop-now.html'" style="padding: 12px 30px; font-size: 16px; background-color: #424244; color: white; border: none; border-radius: 8px; cursor: pointer;">
+      See More
+    </button>
+  </div>
+
+</section>
+
+<!-- Information Section -->
+    <section class="information-section">
+        <div class="info-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Leadership & Mission</a></li>
+                <li><a href="#">Our Business</a></li>
+                <li><a href="#">Brand Identity</a></li>
+                <li><a href="#">Careers </a></li>
+                <li><a href="#">Investor Relations </a></li>
+                <li><a href="#">Newsroom </a></li>
+                <li><a href="#">Ethics </a></li>
+                <li><a href="#">Samsung Designs </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Chat With Us</a></li>
+                <li><a href="#">Order Help</a></li>
+                <li><a href="#">Product Help</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Register Your Account </a></li>
+                <li><a href="#">Request a Repair </a></li>
+                <li><a href="#">Contact Us </a></li>
+                <li><a href="#">Samsung Community </a></li>
+                <li><a href="#">Feedbacks </a></li>
+                <li><a href="#">Manual & Software </a></li>
+                <li><a href="#">Slide-In Electronic Range Recall </a></li>
+                <li><a href="#">Returns </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Offers</h4>
+            <ul>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Samsung Rewards</a></li>
+                <li><a href="#">Education Offer Program</a></li>
+                <li><a href="#">Government Offer Program</a></li>
+                <li><a href="#">Military Offer Program </a></li>
+                <li><a href="#">Employee Offer Program </a></li>
+                <li><a href="#">First Responder Offer Program </a></li>
+                <li><a href="#">Business Offer Program </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Sustainability</h4>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Environment</a></li>
+                <li><a href="#">Digital Responsibility</a></li>
+                <li><a href="#">Security And Privacy</a></li>
+                <li><a href="#">Accessibility </a></li>
+                <li><a href="#">Labour & Human Rights </a></li>
+                <li><a href="#">Conflict Minerals</a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Locations</h4>
+            <ul>
+                <li><a href="#">Asia Pacific</a></li>
+                <li><a href="#">Europe</a></li>
+                <li><a href="#">Middle East & Africa</a></li>
+                <li><a href="#">Latin America </a></li>
+                <li><a href="#">North America </a></li>
+            </ul>
+        </div>
+        <div class="info-column">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">Samsung.com </a></li>
+                <li><a href="#">Samsung Experience Store </a></li>
+                <li><a href="#">Samsung Shop </a></li>
+                <li><a href="#">Samsung Setup </a></li>
+                <li><a href="#">Samsung TV Plus </a></li>
+                <li><a href="#">Samsung Care+</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <img src="images/Samsung_Orig_Wordmark_BLUE_RGB.png" alt="Samsung Logo" />
+    <p>&copy; 2025 Samsung Clone</p>
+    <p>All Rights Reserved</p>
+  </footer>
+
+
+<script>
+
+  const images = [
+    "images/Book Section 02 01.jpg",
+    "images/Book Section 02 02.jpg",
+    "images/Book Section 02 03.jpg",
+    "images/Book Section 02 04.jpg"
+  ];
+
+  function changeLaptopImage(index) {
+    const mainImage = document.getElementById("mainLaptopImage");
+    mainImage.style.opacity = "0";
+
+    setTimeout(() => {
+      mainImage.src = images[index];
+      mainImage.style.opacity = "1";
+    }, 300); // matches the transition speed
+  }
+ let products = [];
+
+  // Fetch products from JSON file
+  fetch('products.json')
+    .then(res => res.json())
+    .then(data => {
+      products = data;
+    })
+    .catch(error => {
+      console.error("Failed to load product data:", error);
+    });
+
+  function handleLiveSearch() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const suggestions = document.getElementById("suggestions");
+    suggestions.innerHTML = "";
+
+    if (!input) {
+      suggestions.style.display = "none";
+      return;
+    }
+
+    const matches = products.filter(p =>
+      p.name.toLowerCase().includes(input)
+    );
+
+    if (matches.length > 0) {
+      matches.forEach(product => {
+        const div = document.createElement("div");
+        div.style.display = "flex";
+        div.style.alignItems = "center";
+        div.style.padding = "10px";
+        div.style.cursor = "pointer";
+        div.innerHTML = `
+          <img src="${product.image}" style="width: 40px; height: 40px; border-radius: 5px; margin-right: 10px;">
+          <span>${product.name}</span>
+        `;
+        div.onclick = () => {
+          window.location.href = product.url;
+        };
+        suggestions.appendChild(div);
+      });
+      suggestions.style.display = "block";
+    } else {
+      suggestions.innerHTML = "<div style='padding: 10px;'>No results found</div>";
+      suggestions.style.display = "block";
+    }
+  } 
+</script>
+</body>
+</html>
